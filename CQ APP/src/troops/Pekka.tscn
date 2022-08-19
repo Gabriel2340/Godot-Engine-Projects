@@ -1,0 +1,39 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://src/troops/Troop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/items/pekka_0_1.png" type="Texture" id=2]
+[ext_resource path="res://src/troops/pekka.gd" type="Script" id=3]
+[ext_resource path="res://assets/images/items/pekka_2_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/items/pekka_0_4.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/items/pekka_0_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/troops/troop_pekka.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/items/pekka_0_2.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/items/pekka_1_4.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/items/pekka_2_3.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/items/pekka_2_2.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/items/pekka_1_3.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/items/pekka_1_1.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/items/pekka_1_2.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/items/pekka_2_4.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/items/131_0.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/items/pekka_n.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/items/pekka_n2.png" type="Texture" id=18]
+
+[node name="Pekka" instance=ExtResource( 1 )]
+texture_normal = ExtResource( 7 )
+script = ExtResource( 3 )
+first_item_icon_lvl_1 = ExtResource( 2 )
+first_item_icon_lvl_2 = ExtResource( 8 )
+first_item_icon_lvl_3 = ExtResource( 6 )
+first_item_icon_lvl_4 = ExtResource( 5 )
+second_item_icon_lvl_1 = ExtResource( 13 )
+second_item_icon_lvl_2 = ExtResource( 14 )
+second_item_icon_lvl_3 = ExtResource( 12 )
+second_item_icon_lvl_4 = ExtResource( 9 )
+third_item_icon_lvl_1 = ExtResource( 4 )
+third_item_icon_lvl_2 = ExtResource( 11 )
+third_item_icon_lvl_3 = ExtResource( 10 )
+third_item_icon_lvl_4 = ExtResource( 15 )
+first_optional_item = ExtResource( 18 )
+second_optional_item = ExtResource( 16 )
+third_optional_item = ExtResource( 17 )

@@ -1,0 +1,116 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/textures/next_wave.png" type="Texture" id=2]
+[ext_resource path="res://src/Levels/level1.gd" type="Script" id=3]
+[ext_resource path="res://src/UI/LevelUi.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UI Elements/SmartPhoneButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Levels/circle_arc.gd" type="Script" id=6]
+[ext_resource path="res://src/Towers/BuildPlace.tscn" type="PackedScene" id=7]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Path1" type="Line2D" parent="."]
+position = Vector2( 178.27, 141.271 )
+points = PoolVector2Array( -196.698, -0.857605, 129, 174, 315, 106, 527, 210, 464, 288, 262, 271, 112, 296 )
+
+[node name="Path2" type="Line2D" parent="."]
+position = Vector2( 178.27, 141.271 )
+points = PoolVector2Array( 907.243, -6.7412, 333.673, 39.7089, 200.929, 109.199, 498.489, 156.417, 396.036, 254.415, 114.512, 260.652, 112, 296 )
+
+[node name="EnemiesGroup1" type="Node2D" parent="."]
+
+[node name="EnemiesGroup2" type="Node2D" parent="."]
+
+[node name="BuildPlace" parent="." instance=ExtResource( 7 )]
+position = Vector2( 128.641, 301.855 )
+
+[node name="BuildPlace2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 243.192, 207.103 )
+
+[node name="BuildPlace3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 482.194, 340.039 )
+
+[node name="BuildPlace4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 637.758, 239.63 )
+
+[node name="BuildPlace5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 537.349, 129.321 )
+
+[node name="BuildPlace6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 458.153, 488.532 )
+
+[node name="BuildPlace7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 900.802, 235.387 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NextWaveButton2" parent="CanvasLayer" instance=ExtResource( 5 )]
+margin_left = 944.204
+margin_top = 106.378
+margin_right = 1008.2
+margin_bottom = 170.378
+rect_scale = Vector2( -1, 1 )
+rect_pivot_offset = Vector2( 32, 32 )
+texture_normal = ExtResource( 2 )
+
+[node name="WaveComing" type="Label" parent="CanvasLayer/NextWaveButton2"]
+visible = false
+margin_left = 60.188
+margin_top = 69.7428
+margin_right = 100.188
+margin_bottom = 83.7428
+rect_scale = Vector2( -1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CircleArc" type="Node2D" parent="CanvasLayer/NextWaveButton2"]
+script = ExtResource( 6 )
+_center = Vector2( 32, 32 )
+_radius = 32
+_color = Color( 1, 1, 1, 1 )
+
+[node name="NextWaveButton" parent="CanvasLayer" instance=ExtResource( 5 )]
+margin_left = 9.16238
+margin_top = 111.875
+margin_right = 73.1624
+margin_bottom = 175.875
+texture_normal = ExtResource( 2 )
+
+[node name="WaveComing" type="Label" parent="CanvasLayer/NextWaveButton"]
+visible = false
+margin_left = 14.0158
+margin_top = 68.0768
+margin_right = 54.0158
+margin_bottom = 82.0768
+
+[node name="CircleArc" type="Node2D" parent="CanvasLayer/NextWaveButton"]
+script = ExtResource( 6 )
+_center = Vector2( 32, 32 )
+_radius = 32
+_color = Color( 1, 1, 1, 1 )
+
+[node name="LevelUI" parent="CanvasLayer" instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="SpawnEnemiesDelay" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="SpawnToursDelay" type="Timer" parent="."]
+
+[node name="NextWaveDelay" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="mouse_entered" from="CanvasLayer/NextWaveButton2" to="." method="_on_NextWaveButton2_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/NextWaveButton2" to="." method="_on_NextWaveButton2_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/NextWaveButton2" to="." method="next_wave_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/NextWaveButton" to="." method="_on_NextWaveButton_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/NextWaveButton" to="." method="_on_NextWaveButton_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/NextWaveButton" to="." method="next_wave_pressed"]
+[connection signal="timeout" from="SpawnEnemiesDelay" to="." method="_on_SpawnEnemiesDelay_timeout"]
+[connection signal="timeout" from="SpawnToursDelay" to="." method="_on_SpawnToursDelay_timeout"]
+[connection signal="timeout" from="NextWaveDelay" to="." method="_on_NextWaveDelay_timeout"]

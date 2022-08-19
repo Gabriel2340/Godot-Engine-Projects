@@ -1,0 +1,39 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://src/troops/Troop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/items/barbarian_1_2.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/items/barbarian_0_4.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/items/barbarian_1_3.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/items/barbarian_1_1.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/items/barbarian_2_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/items/barbarian_2_1.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/troops/troop_barbarian.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/items/barbarian_0_3.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/items/barbarian_0_2.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/items/barbarian_2_4.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/items/barbarian_0_1.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/items/barbarian_n.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/items/barbarian_2_2.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/items/barbarian_n2.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/items/barbarian_1_4.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/items/23_0.png" type="Texture" id=17]
+[ext_resource path="res://src/troops/barbarian.gd" type="Script" id=18]
+
+[node name="Barbarian" instance=ExtResource( 1 )]
+texture_normal = ExtResource( 8 )
+script = ExtResource( 18 )
+first_item_icon_lvl_1 = ExtResource( 12 )
+first_item_icon_lvl_2 = ExtResource( 10 )
+first_item_icon_lvl_3 = ExtResource( 9 )
+first_item_icon_lvl_4 = ExtResource( 3 )
+second_item_icon_lvl_1 = ExtResource( 5 )
+second_item_icon_lvl_2 = ExtResource( 2 )
+second_item_icon_lvl_3 = ExtResource( 4 )
+second_item_icon_lvl_4 = ExtResource( 16 )
+third_item_icon_lvl_1 = ExtResource( 7 )
+third_item_icon_lvl_2 = ExtResource( 14 )
+third_item_icon_lvl_3 = ExtResource( 6 )
+third_item_icon_lvl_4 = ExtResource( 11 )
+first_optional_item = ExtResource( 13 )
+second_optional_item = ExtResource( 17 )
+third_optional_item = ExtResource( 15 )

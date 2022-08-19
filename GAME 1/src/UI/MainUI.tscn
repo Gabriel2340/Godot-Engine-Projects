@@ -1,0 +1,134 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/fonts/Space Font-40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/images/heart.png" type="Texture" id=2]
+[ext_resource path="res://src/UI/MainUI.gd" type="Script" id=3]
+[ext_resource path="res://assets/fonts/Space Font-24.tres" type="DynamicFont" id=4]
+
+[node name="MainUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Heart" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -259.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = 69.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="Heart"]
+margin_right = 94.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 1 )
+text = "0:00"
+
+[node name="Control" type="Control" parent="Heart"]
+margin_left = 98.0
+margin_right = 128.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 30, 0 )
+
+[node name="Image" type="TextureRect" parent="Heart"]
+margin_left = 132.0
+margin_right = 181.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 49, 0 )
+texture = ExtResource( 2 )
+stretch_mode = 6
+
+[node name="Value" type="Label" parent="Heart"]
+margin_left = 185.0
+margin_right = 239.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 1 )
+text = "30"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="LoseContainer" type="VBoxContainer" parent="."]
+pause_mode = 2
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -99.5
+margin_right = 100.0
+margin_bottom = 99.5
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="LoseContainer"]
+margin_right = 200.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 1 )
+text = "You Lost"
+
+[node name="TryAgainButton" type="Button" parent="LoseContainer"]
+margin_top = 79.0
+margin_right = 200.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 200, 45 )
+custom_fonts/font = ExtResource( 4 )
+text = "Try Again"
+
+[node name="MainMenuButton" type="Button" parent="LoseContainer"]
+margin_top = 154.0
+margin_right = 200.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 200, 45 )
+custom_fonts/font = ExtResource( 4 )
+text = "Main Menu"
+
+[node name="WinContainer" type="VBoxContainer" parent="."]
+pause_mode = 2
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -99.0
+margin_right = 100.0
+margin_bottom = 100.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="WinContainer"]
+margin_right = 200.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 1 )
+text = "You Won!"
+
+[node name="TryAgainButton" type="Button" parent="WinContainer"]
+margin_top = 79.0
+margin_right = 200.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 200, 45 )
+custom_fonts/font = ExtResource( 4 )
+text = "Play Again"
+
+[node name="MainMenuButton" type="Button" parent="WinContainer"]
+margin_top = 154.0
+margin_right = 200.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 200, 45 )
+custom_fonts/font = ExtResource( 4 )
+text = "Main Menu"
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="LoseContainer/TryAgainButton" to="." method="_on_TryAgainButton_pressed"]
+[connection signal="pressed" from="LoseContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+[connection signal="pressed" from="WinContainer/TryAgainButton" to="." method="_on_TryAgainButton_pressed"]
+[connection signal="pressed" from="WinContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

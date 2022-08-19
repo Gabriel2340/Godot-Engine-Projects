@@ -1,0 +1,102 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "TextureButton",
+"class": "Building",
+"language": "GDScript",
+"path": "res://src/buildings/building.gd"
+}, {
+"base": "TextureButton",
+"class": "Troop",
+"language": "GDScript",
+"path": "res://src/troops/troop.gd"
+}, {
+"base": "Control",
+"class": "Utility",
+"language": "GDScript",
+"path": "res://src/books/utility.gd"
+} ]
+_global_script_class_icons={
+"Building": "",
+"Troop": "",
+"Utility": ""
+}
+
+[application]
+
+config/name="CQ APP"
+run/main_scene="res://src/mainUI/MainMenu.tscn"
+boot_splash/image="res://assets/images/other/image.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://assets/images/other/app_icon.png"
+config/macos_native_icon="res://assets/images/other/app_icon.icns"
+config/windows_native_icon="res://assets/images/other/app_icon.ico"
+config/quit_on_go_back=false
+
+[debug]
+
+gdscript/warnings/narrowing_conversion=false
+gdscript/warnings/return_value_discarded=false
+gdscript/warnings/integer_division=false
+
+[display]
+
+window/size/width=1200
+window/size/height=703
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[input]
+
+ui_cancel={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ctrl={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777238,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+alt={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777240,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+left_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+enter={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+undo={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":true,"pressed":false,"scancode":90,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+redo={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":true,"control":true,"meta":false,"command":true,"pressed":false,"scancode":90,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

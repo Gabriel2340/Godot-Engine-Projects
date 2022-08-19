@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/images/enemyships/Spaceship_01_RED.png" type="Texture" id=1]
+[ext_resource path="res://src/Enemies/enemy.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/fire.png" type="Texture" id=3]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.0206186, 0.272727, 0.842975, 1 )
+colors = PoolColorArray( 0, 0, 1, 0.0862745, 0.564706, 0.552941, 1, 1, 0.2, 0.219608, 0.686275, 1, 0.2, 0.219608, 0.686275, 0.0705882 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+width = 100
+
+[sub_resource type="ParticlesMaterial" id=4]
+lifetime_randomness = 0.3
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 1.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.42
+angular_velocity = 50.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+tangential_accel_random = 0.99
+angle = 720.0
+angle_random = 1.0
+scale = 0.5
+color_ramp = SubResource( 3 )
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 3.14159
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -8.77818, 4.6683, -8.35725, 26.9772, 8.76029, 27.6788, 8.9006, 5.79076, 40.1892, -2.6277, 5.81384, -27.0413, -7.5154, -27.1816, -40.0668, -3.04863 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( -0.104065, -31.2567 )
+amount = 20
+process_material = SubResource( 4 )
+texture = ExtResource( 3 )

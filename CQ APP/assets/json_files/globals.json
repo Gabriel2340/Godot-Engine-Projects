@@ -1,0 +1,2 @@
+var globals: Dictionary = {"first time using the app" : true,
+		"see_dead_buildings" : false}

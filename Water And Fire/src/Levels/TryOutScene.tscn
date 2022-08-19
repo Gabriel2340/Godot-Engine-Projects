@@ -1,0 +1,105 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/images/tile.png" type="Texture" id=1]
+[ext_resource path="res://src/objects/MovingPlatform3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Players/Fire.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Players/Water.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/objects/Swing.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/objects/Lever.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/images/objects/19_d9.png" type="Texture" id=7]
+[ext_resource path="res://src/objects/TestObject.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/objects/Air.tscn" type="PackedScene" id=9]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "tile.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="Curve2D" id=3]
+resource_local_to_scene = true
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 104, -168, 0, 0, 0, 0, 104, -256 )
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 11, 11 )
+
+[node name="TryOutScene" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 4
+collision_mask = 239
+format = 1
+tile_data = PoolIntArray( 786432, 0, 0, 786433, 0, 0, 786462, 0, 0, 786463, 0, 0, 851968, 0, 0, 851969, 0, 0, 851998, 0, 0, 851999, 0, 0, 917504, 0, 0, 917505, 0, 0, 917534, 0, 0, 917535, 0, 0, 983040, 0, 0, 983041, 0, 0, 983070, 0, 0, 983071, 0, 0, 1048576, 0, 0, 1048577, 0, 0, 1048606, 0, 0, 1048607, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0, 1179648, 0, 0, 1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0 )
+
+[node name="Fire" parent="." instance=ExtResource( 3 )]
+position = Vector2( 184, 496 )
+
+[node name="Water" parent="." instance=ExtResource( 4 )]
+position = Vector2( 144, 480 )
+
+[node name="MovingPlatform3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 462, 537 )
+
+[node name="MovingPlatform" parent="MovingPlatform3" index="0"]
+position = Vector2( 20, -8 )
+
+[node name="Path2D" parent="MovingPlatform3/MovingPlatform" index="1"]
+curve = SubResource( 3 )
+
+[node name="Button" parent="MovingPlatform3" index="1"]
+position = Vector2( -160, 1 )
+
+[node name="Button2" parent="MovingPlatform3" index="2"]
+position = Vector2( 185, 0 )
+
+[node name="Lever" parent="." instance=ExtResource( 6 )]
+position = Vector2( 253, 523 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." groups=["bodies"]]
+position = Vector2( 442, 504 )
+collision_layer = 64
+collision_mask = 3
+gravity_scale = 3.0
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+scale = Vector2( 0.128655, 0.128655 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 4 )
+
+[node name="TestObject" parent="." instance=ExtResource( 8 )]
+position = Vector2( 525, 468 )
+
+[node name="Swing" parent="." instance=ExtResource( 5 )]
+position = Vector2( 361, 363 )
+
+[node name="Air" parent="." instance=ExtResource( 9 )]
+position = Vector2( 431, 557 )
+
+[editable path="MovingPlatform3"]
+[editable path="MovingPlatform3/MovingPlatform"]

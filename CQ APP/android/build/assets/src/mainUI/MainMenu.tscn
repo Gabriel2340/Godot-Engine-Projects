@@ -1,0 +1,4422 @@
+[gd_scene load_steps=124 format=2]
+
+[ext_resource path="res://src/UIelements/TroopButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/troop_icon/face_archer.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/troop_icon/face_barbarian.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/troop_icon/face_wizard.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/troop_icon/face_prince.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/troop_icon/face_giant.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/troop_icon/face_bomber.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/troop_icon/face_pekka.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/troop_icon/face_minion.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/troop_icon/face_babydragon.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/troop_icon/face_goblin.png" type="Texture" id=11]
+[ext_resource path="res://src/UIelements/CenterPos.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/fonts/Clash-Regular-32.tres" type="DynamicFont" id=13]
+[ext_resource path="res://assets/images/cq/Clash Quest Keyart Public.jpg" type="Texture" id=14]
+[ext_resource path="res://assets/images/other/blue_circle.png" type="Texture" id=15]
+[ext_resource path="res://src/groups/buttongroup.tres" type="ButtonGroup" id=16]
+[ext_resource path="res://src/mainUI/main_menu.gd" type="Script" id=17]
+[ext_resource path="res://assets/images/towers/archer tower/archer_tower_1.png" type="Texture" id=18]
+[ext_resource path="res://src/UIelements/BuildingButton.tscn" type="PackedScene" id=19]
+[ext_resource path="res://assets/images/towers/cannon/cannon_1.png" type="Texture" id=20]
+[ext_resource path="res://src/UIelements/UnitProprieties.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/spells/Log.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/spells/Zap.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/spells/Fireball.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/spells/Rocket.tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/books/Retreat.tscn" type="PackedScene" id=26]
+[ext_resource path="res://src/books/Rush.tscn" type="PackedScene" id=27]
+[ext_resource path="res://src/books/Charge.tscn" type="PackedScene" id=28]
+[ext_resource path="res://src/books/Frontline.tscn" type="PackedScene" id=29]
+[ext_resource path="res://src/books/Swap.tscn" type="PackedScene" id=30]
+[ext_resource path="res://src/spells/Bless.tscn" type="PackedScene" id=31]
+[ext_resource path="res://assets/images/towers/wall/wall_1.png" type="Texture" id=32]
+[ext_resource path="res://src/groups/utility_group.tres" type="ButtonGroup" id=33]
+[ext_resource path="res://assets/images/towers/wizard tower/wizard_tower_1.png" type="Texture" id=34]
+[ext_resource path="res://src/mainUI/free_tile.gd" type="Script" id=35]
+[ext_resource path="res://assets/images/towers/mortar/mortar_1.png" type="Texture" id=36]
+[ext_resource path="res://assets/images/towers/x bow/x_bow_1.png" type="Texture" id=37]
+[ext_resource path="res://assets/images/towers/inferno/inferno_tower_1.png" type="Texture" id=38]
+[ext_resource path="res://assets/images/towers/tesla/tesla_1.png" type="Texture" id=39]
+[ext_resource path="res://assets/images/towers/furnace/furnace_2.png" type="Texture" id=40]
+[ext_resource path="res://assets/images/towers/goblin hut/goblin_hut_2.png" type="Texture" id=41]
+[ext_resource path="res://assets/images/towers/air defence/air_defence_3.png" type="Texture" id=42]
+[ext_resource path="res://assets/images/towers/cannon/cannon_2.png" type="Texture" id=43]
+[ext_resource path="res://assets/fonts/Clash-Regular-12.tres" type="DynamicFont" id=44]
+[ext_resource path="res://src/groups/buildings_group.tres" type="ButtonGroup" id=45]
+[ext_resource path="res://assets/images/towers/wizard tower/wizard_tower_2.png" type="Texture" id=46]
+[ext_resource path="res://assets/images/towers/archer tower/archer_tower_2.png" type="Texture" id=47]
+[ext_resource path="res://assets/images/towers/mortar/mortar_2.png" type="Texture" id=48]
+[ext_resource path="res://assets/images/towers/tesla/tesla_2.png" type="Texture" id=49]
+[ext_resource path="res://assets/images/towers/gold storage/gold_storage_2.png" type="Texture" id=50]
+[ext_resource path="res://assets/images/towers/gold storage/gold_storage_1.png" type="Texture" id=51]
+[ext_resource path="res://assets/images/towers/x bow/x_bow_2.png" type="Texture" id=52]
+[ext_resource path="res://assets/images/towers/inferno/inferno_tower_2.png" type="Texture" id=53]
+[ext_resource path="res://assets/images/towers/archer tower/archer_tower_3.png" type="Texture" id=54]
+[ext_resource path="res://assets/images/towers/cannon/cannon_3.png" type="Texture" id=55]
+[ext_resource path="res://assets/images/towers/mortar/mortar_3.png" type="Texture" id=56]
+[ext_resource path="res://assets/images/towers/furnace/furnace_3.png" type="Texture" id=57]
+[ext_resource path="res://assets/images/towers/goblin hut/goblin_hut_3.png" type="Texture" id=58]
+[ext_resource path="res://assets/images/towers/tesla/tesla_3.png" type="Texture" id=59]
+[ext_resource path="res://assets/images/towers/inferno/inferno_tower_3.png" type="Texture" id=60]
+[ext_resource path="res://assets/images/towers/x bow/x_bow_3.png" type="Texture" id=61]
+[ext_resource path="res://assets/images/towers/wizard tower/wizard_tower_3.png" type="Texture" id=62]
+[ext_resource path="res://assets/images/towers/gold storage/gold_storage_3.png" type="Texture" id=63]
+[ext_resource path="res://assets/images/towers/gold storage/gold_storage_4.png" type="Texture" id=64]
+[ext_resource path="res://assets/images/towers/inferno/inferno_tower_4.png" type="Texture" id=65]
+[ext_resource path="res://assets/images/towers/goblin hut/goblin_hut_4.png" type="Texture" id=66]
+[ext_resource path="res://assets/images/towers/air defence/air_defence_4.png" type="Texture" id=67]
+[ext_resource path="res://assets/images/towers/cannon/cannon_4.png" type="Texture" id=68]
+[ext_resource path="res://assets/images/towers/archer tower/archer_tower_4.png" type="Texture" id=69]
+[ext_resource path="res://assets/images/towers/furnace/furnace_4.png" type="Texture" id=70]
+[ext_resource path="res://assets/images/towers/tesla/tesla_4.png" type="Texture" id=71]
+[ext_resource path="res://assets/images/towers/x bow/x_bow_4.png" type="Texture" id=72]
+[ext_resource path="res://assets/images/towers/wizard tower/wizard_tower_4.png" type="Texture" id=73]
+[ext_resource path="res://assets/images/towers/mortar/mortar_4.png" type="Texture" id=74]
+[ext_resource path="res://assets/images/towers/wizard tower/wizard_tower_5.png" type="Texture" id=75]
+[ext_resource path="res://assets/images/towers/x bow/x_bow_5.png" type="Texture" id=76]
+[ext_resource path="res://assets/images/towers/inferno/inferno_tower_5.png" type="Texture" id=77]
+[ext_resource path="res://assets/images/towers/furnace/furnace_5.png" type="Texture" id=78]
+[ext_resource path="res://assets/images/towers/air defence/air_defence_5.png" type="Texture" id=79]
+[ext_resource path="res://assets/images/towers/gold storage/gold_storage_5.png" type="Texture" id=80]
+[ext_resource path="res://assets/images/towers/mortar/mortar_5.png" type="Texture" id=81]
+[ext_resource path="res://assets/images/towers/archer tower/archer_tower_5.png" type="Texture" id=82]
+[ext_resource path="res://assets/images/towers/tesla/tesla_5.png" type="Texture" id=83]
+[ext_resource path="res://assets/images/towers/goblin hut/goblin_hut_5.png" type="Texture" id=84]
+[ext_resource path="res://assets/images/towers/cannon/cannon_5.png" type="Texture" id=85]
+[ext_resource path="res://assets/images/towers/air defence/air_defence_6.png" type="Texture" id=86]
+[ext_resource path="res://assets/images/towers/goblin hut/goblin_hut_6.png" type="Texture" id=87]
+[ext_resource path="res://assets/images/towers/furnace/furnace_6.png" type="Texture" id=88]
+[ext_resource path="res://assets/images/towers/wall/wall_2.png" type="Texture" id=89]
+[ext_resource path="res://assets/images/towers/wall/wall_5.png" type="Texture" id=90]
+[ext_resource path="res://assets/images/towers/wall/wall_4.png" type="Texture" id=91]
+[ext_resource path="res://assets/images/towers/wall/wall_3.png" type="Texture" id=92]
+[ext_resource path="res://src/mainUI/map_container.gd" type="Script" id=93]
+[ext_resource path="res://assets/fonts/Clash-Regular-24.tres" type="DynamicFont" id=94]
+[ext_resource path="res://src/UIelements/InfoMenu.tscn" type="PackedScene" id=95]
+[ext_resource path="res://src/nodes/Redo.tscn" type="PackedScene" id=96]
+[ext_resource path="res://src/UIelements/StartingAnimation.tscn" type="PackedScene" id=97]
+[ext_resource path="res://src/UIelements/SmartPhoneButton.tscn" type="PackedScene" id=98]
+[ext_resource path="res://assets/images/items/goblin_0_4.png" type="Texture" id=99]
+[ext_resource path="res://assets/fonts/Clash-Regular-16.tres" type="DynamicFont" id=100]
+[ext_resource path="res://assets/images/other/delete_troop.png" type="Texture" id=101]
+[ext_resource path="res://src/UIelements/GetImageOnAndroid.tscn" type="PackedScene" id=102]
+[ext_resource path="res://assets/images/other/previous.png" type="Texture" id=103]
+[ext_resource path="res://assets/images/other/next.png" type="Texture" id=104]
+[ext_resource path="res://assets/images/other/pause.png" type="Texture" id=105]
+[ext_resource path="res://assets/images/other/play-button.png" type="Texture" id=106]
+[ext_resource path="res://src/spells/Earthquake.tscn" type="PackedScene" id=107]
+[ext_resource path="res://src/books/Switch.tscn" type="PackedScene" id=108]
+[ext_resource path="res://assets/images/towers/dune dragon/dune_dragon_1.png" type="Texture" id=109]
+[ext_resource path="res://assets/images/towers/skeleton/skeleton_3.png" type="Texture" id=110]
+[ext_resource path="res://assets/images/towers/skeleton/skeleton_4.png" type="Texture" id=111]
+[ext_resource path="res://assets/images/towers/skeleton/skeleton_6.png" type="Texture" id=112]
+[ext_resource path="res://assets/images/towers/skeleton/skeleton_5.png" type="Texture" id=113]
+[ext_resource path="res://assets/images/troop_icon/face_bomb_miner.png" type="Texture" id=114]
+[ext_resource path="res://src/UIelements/TroopsCount.tscn" type="PackedScene" id=115]
+[ext_resource path="res://assets/images/towers/cannon/cannon_8.png" type="Texture" id=116]
+[ext_resource path="res://assets/images/towers/wizard tower/wizard_tower_8.png" type="Texture" id=117]
+[ext_resource path="res://assets/images/towers/archer tower/archer_tower_8.png" type="Texture" id=118]
+[ext_resource path="res://assets/images/towers/mortar/mortar_8.png" type="Texture" id=119]
+[ext_resource path="res://assets/images/towers/x bow/x_bow_8.png" type="Texture" id=120]
+[ext_resource path="res://assets/images/towers/gold storage/gold_storage_8.png" type="Texture" id=121]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "book_pressed"
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Image:rect_min_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.35, 0.6 ),
+"transitions": PoolRealArray( 0.42, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 42, 50 ), Vector2( 52.7, 62.9 ), Vector2( 42, 50 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Image:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.35, 0.6 ),
+"transitions": PoolRealArray( 0.42, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -5.35, -6.45 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Image:rect_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.35, 0.6 ),
+"transitions": PoolRealArray( 0.42, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 42, 50 ), Vector2( 52.7, 62.9 ), Vector2( 42, 50 ) ]
+}
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.314987
+margin_top = 0.140305
+margin_right = -0.314941
+margin_bottom = 0.14032
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClashQuestKeyartPublic" type="TextureRect" parent="."]
+modulate = Color( 0.384314, 0.384314, 0.384314, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -170.0
+margin_right = 1.0
+margin_bottom = 255.0
+texture = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CenterPos" parent="." instance=ExtResource( 12 )]
+
+[node name="SelectionTab" type="TabContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -297.5
+margin_top = -326.0
+margin_right = -25.5
+margin_bottom = 326.0
+custom_fonts/font = ExtResource( 44 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Troops" type="ScrollContainer" parent="SelectionTab"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 31.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Troops" type="GridContainer" parent="SelectionTab/Troops"]
+margin_left = 16.0
+margin_right = 236.0
+margin_bottom = 740.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_constants/hseparation = 20
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Archer" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 10
+
+[node name="Button" parent="SelectionTab/Troops/Troops/Archer" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/Archer" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Archer"
+
+[node name="Barbarian" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_left = 120.0
+margin_right = 220.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 2
+
+[node name="Button" parent="SelectionTab/Troops/Troops/Barbarian" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/Barbarian" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Barbarian"
+
+[node name="Wizard" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_top = 124.0
+margin_right = 100.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 10
+
+[node name="Button" parent="SelectionTab/Troops/Troops/Wizard" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/Wizard" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Wizard"
+
+[node name="Prince" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_left = 120.0
+margin_top = 124.0
+margin_right = 220.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 2
+
+[node name="Button" parent="SelectionTab/Troops/Troops/Prince" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/Prince" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Prince"
+
+[node name="Giant" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_top = 248.0
+margin_right = 100.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 10
+
+[node name="Button" parent="SelectionTab/Troops/Troops/Giant" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/Giant" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Giant"
+
+[node name="Goblin" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_left = 120.0
+margin_top = 248.0
+margin_right = 220.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 2
+
+[node name="Button" parent="SelectionTab/Troops/Troops/Goblin" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 11 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/Goblin" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Goblin"
+
+[node name="Pekka" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_top = 372.0
+margin_right = 100.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 10
+
+[node name="Button" parent="SelectionTab/Troops/Troops/Pekka" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/Pekka" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "P.E.K.K.A"
+
+[node name="Bomber" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_left = 120.0
+margin_top = 372.0
+margin_right = 220.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 2
+
+[node name="Button" parent="SelectionTab/Troops/Troops/Bomber" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/Bomber" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Bomber"
+
+[node name="BabyDragon" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_top = 496.0
+margin_right = 100.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 10
+
+[node name="Button" parent="SelectionTab/Troops/Troops/BabyDragon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 10 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/BabyDragon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Baby 
+Dragon"
+
+[node name="Minion" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_left = 120.0
+margin_top = 496.0
+margin_right = 220.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+size_flags_horizontal = 2
+
+[node name="Button" parent="SelectionTab/Troops/Troops/Minion" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/Minion" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Minion"
+
+[node name="BombMIner" parent="SelectionTab/Troops/Troops" instance=ExtResource( 1 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Troops/Troops/BombMIner" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 16 )
+texture_normal = ExtResource( 114 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" parent="SelectionTab/Troops/Troops/BombMIner" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Bomb 
+Miner"
+
+[node name="Buildings" type="TabContainer" parent="SelectionTab"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 31.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="1" type="ScrollContainer" parent="SelectionTab/Buildings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
+
+[node name="Buildings" type="GridContainer" parent="SelectionTab/Buildings/1"]
+margin_left = 30.0
+margin_right = 234.0
+margin_bottom = 864.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="Cannon" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/Cannon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 20 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/Cannon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Cannon"
+
+[node name="WizardTower" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/WizardTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 34 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/WizardTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wizard
+Tower"
+
+[node name="ArcherTower" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_top = 124.0
+margin_right = 100.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/ArcherTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 18 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/ArcherTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Archer
+Tower"
+
+[node name="Mortar" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 124.0
+margin_right = 204.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/Mortar" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 36 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/Mortar" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Mortar"
+
+[node name="Xbow" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_top = 248.0
+margin_right = 100.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/Xbow" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 37 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/Xbow" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "X-Bow"
+
+[node name="InfernoTower" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 248.0
+margin_right = 204.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/InfernoTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 38 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/InfernoTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Inferno
+Tower"
+
+[node name="Tesla" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_top = 372.0
+margin_right = 100.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/Tesla" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 39 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/Tesla" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Tesla"
+
+[node name="Furnace" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 372.0
+margin_right = 204.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/Furnace" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 40 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/Furnace" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Furnace"
+
+[node name="GoblinHut" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_top = 496.0
+margin_right = 100.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/GoblinHut" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 41 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/GoblinHut" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Goblin
+Hut"
+
+[node name="AirDefence" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 496.0
+margin_right = 204.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/AirDefence" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 42 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/AirDefence" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Air
+Defence"
+
+[node name="GoldStorage" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/GoldStorage" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 51 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/GoldStorage" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Gold
+Storage"
+
+[node name="Wall" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 620.0
+margin_right = 204.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/Wall" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 32 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/Wall" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Wall"
+
+[node name="DuneDragon" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_top = 744.0
+margin_right = 100.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/DuneDragon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 109 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/DuneDragon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Dune
+Dragon"
+
+[node name="Skeleton" parent="SelectionTab/Buildings/1/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 744.0
+margin_right = 204.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/1/Buildings/Skeleton" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 110 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/1/Buildings/Skeleton" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Skeleton"
+
+[node name="2" type="ScrollContainer" parent="SelectionTab/Buildings"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
+
+[node name="Buildings" type="GridContainer" parent="SelectionTab/Buildings/2"]
+margin_left = 30.0
+margin_right = 234.0
+margin_bottom = 864.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="Cannon" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/Cannon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 43 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/Cannon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Cannon"
+
+[node name="WizardTower" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/WizardTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 46 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/WizardTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wizard
+Tower"
+
+[node name="ArcherTower" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_top = 124.0
+margin_right = 100.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/ArcherTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 47 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/ArcherTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Archer
+Tower"
+
+[node name="Mortar" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 124.0
+margin_right = 204.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/Mortar" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 48 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/Mortar" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Mortar"
+
+[node name="Xbow" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_top = 248.0
+margin_right = 100.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/Xbow" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 52 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/Xbow" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "X-Bow"
+
+[node name="InfernoTower" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 248.0
+margin_right = 204.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/InfernoTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 53 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/InfernoTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Inferno
+Tower"
+
+[node name="Tesla" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_top = 372.0
+margin_right = 100.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/Tesla" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 49 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/Tesla" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Tesla"
+
+[node name="Furnace" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 372.0
+margin_right = 204.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/Furnace" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 40 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/Furnace" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Furnace"
+
+[node name="GoblinHut" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_top = 496.0
+margin_right = 100.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/GoblinHut" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 41 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/GoblinHut" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Goblin
+Hut"
+
+[node name="AirDefence" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 496.0
+margin_right = 204.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/AirDefence" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 42 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/AirDefence" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Air
+Defence"
+
+[node name="GoldStorage" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/GoldStorage" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 50 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/GoldStorage" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Gold
+Storage"
+
+[node name="Wall" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/Wall" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 89 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/Wall" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wall"
+
+[node name="DuneDragon" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_top = 744.0
+margin_right = 100.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/DuneDragon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 109 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/DuneDragon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Dune
+Dragon"
+
+[node name="Skeleton" parent="SelectionTab/Buildings/2/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 744.0
+margin_right = 204.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/2/Buildings/Skeleton" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 110 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/2/Buildings/Skeleton" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Skeleton"
+
+[node name="3" type="ScrollContainer" parent="SelectionTab/Buildings"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
+
+[node name="Buildings" type="GridContainer" parent="SelectionTab/Buildings/3"]
+margin_left = 30.0
+margin_right = 234.0
+margin_bottom = 864.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="Cannon" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/Cannon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 55 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/Cannon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Cannon"
+
+[node name="WizardTower" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/WizardTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 62 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/WizardTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wizard
+Tower"
+
+[node name="ArcherTower" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_top = 124.0
+margin_right = 100.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/ArcherTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 54 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/ArcherTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Archer
+Tower"
+
+[node name="Mortar" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 124.0
+margin_right = 204.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/Mortar" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 56 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/Mortar" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Mortar"
+
+[node name="Xbow" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_top = 248.0
+margin_right = 100.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/Xbow" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 61 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/Xbow" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "X-Bow"
+
+[node name="InfernoTower" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 248.0
+margin_right = 204.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/InfernoTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 60 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/InfernoTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Inferno
+Tower"
+
+[node name="Tesla" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_top = 372.0
+margin_right = 100.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/Tesla" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 59 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/Tesla" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Tesla"
+
+[node name="Furnace" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 372.0
+margin_right = 204.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/Furnace" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 57 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/Furnace" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Furnace"
+
+[node name="GoblinHut" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_top = 496.0
+margin_right = 100.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/GoblinHut" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 58 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/GoblinHut" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Goblin
+Hut"
+
+[node name="AirDefence" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 496.0
+margin_right = 204.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/AirDefence" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 42 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/AirDefence" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Air
+Defence"
+
+[node name="GoldStorage" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/GoldStorage" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 63 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/GoldStorage" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Gold
+Storage"
+
+[node name="Wall" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/Wall" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 92 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/Wall" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wall"
+
+[node name="DuneDragon" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_top = 744.0
+margin_right = 100.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/DuneDragon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 109 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/DuneDragon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Dune
+Dragon"
+
+[node name="Skeleton" parent="SelectionTab/Buildings/3/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 744.0
+margin_right = 204.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/3/Buildings/Skeleton" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 110 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/3/Buildings/Skeleton" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Skeleton"
+
+[node name="4" type="ScrollContainer" parent="SelectionTab/Buildings"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
+
+[node name="Buildings" type="GridContainer" parent="SelectionTab/Buildings/4"]
+margin_left = 30.0
+margin_right = 234.0
+margin_bottom = 864.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="Cannon" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/Cannon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 68 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/Cannon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Cannon"
+
+[node name="WizardTower" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/WizardTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 73 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/WizardTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wizard
+Tower"
+
+[node name="ArcherTower" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_top = 124.0
+margin_right = 100.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/ArcherTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 69 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/ArcherTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Archer
+Tower"
+
+[node name="Mortar" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 124.0
+margin_right = 204.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/Mortar" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 74 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/Mortar" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Mortar"
+
+[node name="Xbow" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_top = 248.0
+margin_right = 100.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/Xbow" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 72 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/Xbow" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "X-Bow"
+
+[node name="InfernoTower" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 248.0
+margin_right = 204.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/InfernoTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 65 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/InfernoTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Inferno
+Tower"
+
+[node name="Tesla" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_top = 372.0
+margin_right = 100.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/Tesla" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 71 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/Tesla" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Tesla"
+
+[node name="Furnace" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 372.0
+margin_right = 204.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/Furnace" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 70 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/Furnace" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Furnace"
+
+[node name="GoblinHut" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_top = 496.0
+margin_right = 100.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/GoblinHut" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 66 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/GoblinHut" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Goblin
+Hut"
+
+[node name="AirDefence" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 496.0
+margin_right = 204.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/AirDefence" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 67 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/AirDefence" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Air
+Defence"
+
+[node name="GoldStorage" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/GoldStorage" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 64 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/GoldStorage" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Gold
+Storage"
+
+[node name="Wall" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/Wall" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 91 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/Wall" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wall"
+
+[node name="DuneDragon" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_top = 744.0
+margin_right = 100.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/DuneDragon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 109 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/DuneDragon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Dune
+Dragon"
+
+[node name="Skeleton" parent="SelectionTab/Buildings/4/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 744.0
+margin_right = 204.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/4/Buildings/Skeleton" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 111 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/4/Buildings/Skeleton" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Skeleton"
+
+[node name="5" type="ScrollContainer" parent="SelectionTab/Buildings"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
+
+[node name="Buildings" type="GridContainer" parent="SelectionTab/Buildings/5"]
+margin_left = 30.0
+margin_right = 234.0
+margin_bottom = 864.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="Cannon" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/Cannon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 85 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/Cannon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Cannon"
+
+[node name="WizardTower" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/WizardTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 75 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/WizardTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wizard
+Tower"
+
+[node name="ArcherTower" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_top = 124.0
+margin_right = 100.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/ArcherTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 82 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/ArcherTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Archer
+Tower"
+
+[node name="Mortar" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 124.0
+margin_right = 204.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/Mortar" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 81 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/Mortar" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Mortar"
+
+[node name="Xbow" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_top = 248.0
+margin_right = 100.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/Xbow" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 76 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/Xbow" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "X-Bow"
+
+[node name="InfernoTower" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 248.0
+margin_right = 204.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/InfernoTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 77 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/InfernoTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Inferno
+Tower"
+
+[node name="Tesla" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_top = 372.0
+margin_right = 100.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/Tesla" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 83 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/Tesla" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Tesla"
+
+[node name="Furnace" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 372.0
+margin_right = 204.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/Furnace" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 78 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/Furnace" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Furnace"
+
+[node name="GoblinHut" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_top = 496.0
+margin_right = 100.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/GoblinHut" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 84 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/GoblinHut" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Goblin
+Hut"
+
+[node name="AirDefence" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 496.0
+margin_right = 204.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/AirDefence" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 79 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/AirDefence" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Air
+Defence"
+
+[node name="GoldStorage" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/GoldStorage" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 80 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/GoldStorage" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Gold
+Storage"
+
+[node name="Wall" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/Wall" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 90 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/Wall" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wall"
+
+[node name="DuneDragon" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_top = 744.0
+margin_right = 100.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/DuneDragon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 109 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/DuneDragon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Dune
+Dragon"
+
+[node name="Skeleton" parent="SelectionTab/Buildings/5/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 744.0
+margin_right = 204.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/5/Buildings/Skeleton" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 113 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/5/Buildings/Skeleton" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Skeleton"
+
+[node name="6" type="ScrollContainer" parent="SelectionTab/Buildings"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
+
+[node name="Buildings" type="GridContainer" parent="SelectionTab/Buildings/6"]
+margin_left = 30.0
+margin_right = 234.0
+margin_bottom = 864.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="Cannon" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/Cannon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 85 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/Cannon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Cannon"
+
+[node name="WizardTower" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/WizardTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 75 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/WizardTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wizard
+Tower"
+
+[node name="ArcherTower" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_top = 124.0
+margin_right = 100.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/ArcherTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 82 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/ArcherTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Archer
+Tower"
+
+[node name="Mortar" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 124.0
+margin_right = 204.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/Mortar" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 81 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/Mortar" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Mortar"
+
+[node name="Xbow" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_top = 248.0
+margin_right = 100.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/Xbow" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 76 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/Xbow" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "X-Bow"
+
+[node name="InfernoTower" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 248.0
+margin_right = 204.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/InfernoTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 77 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/InfernoTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Inferno
+Tower"
+
+[node name="Tesla" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_top = 372.0
+margin_right = 100.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/Tesla" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 83 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/Tesla" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Tesla"
+
+[node name="Furnace" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 372.0
+margin_right = 204.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/Furnace" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 88 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/Furnace" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Furnace"
+
+[node name="GoblinHut" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_top = 496.0
+margin_right = 100.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/GoblinHut" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 87 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/GoblinHut" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Goblin
+Hut"
+
+[node name="AirDefence" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 496.0
+margin_right = 204.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/AirDefence" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 86 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/AirDefence" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Air
+Defence"
+
+[node name="GoldStorage" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/GoldStorage" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 80 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/GoldStorage" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Gold
+Storage"
+
+[node name="Wall" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/Wall" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 90 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/Wall" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wall"
+
+[node name="DuneDragon" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_top = 744.0
+margin_right = 100.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/DuneDragon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 109 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/DuneDragon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Dune
+Dragon"
+
+[node name="Skeleton" parent="SelectionTab/Buildings/6/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 744.0
+margin_right = 204.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/6/Buildings/Skeleton" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 112 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/6/Buildings/Skeleton" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Skeleton"
+
+[node name="7" type="ScrollContainer" parent="SelectionTab/Buildings"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
+
+[node name="Buildings" type="GridContainer" parent="SelectionTab/Buildings/7"]
+margin_left = 30.0
+margin_right = 234.0
+margin_bottom = 864.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="Cannon" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/Cannon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 85 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/Cannon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Cannon"
+
+[node name="WizardTower" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/WizardTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 75 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/WizardTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wizard
+Tower"
+
+[node name="ArcherTower" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_top = 124.0
+margin_right = 100.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/ArcherTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 82 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/ArcherTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Archer
+Tower"
+
+[node name="Mortar" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 124.0
+margin_right = 204.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/Mortar" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 81 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/Mortar" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Mortar"
+
+[node name="Xbow" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_top = 248.0
+margin_right = 100.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/Xbow" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 76 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/Xbow" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "X-Bow"
+
+[node name="InfernoTower" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 248.0
+margin_right = 204.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/InfernoTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 77 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/InfernoTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Inferno
+Tower"
+
+[node name="Tesla" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_top = 372.0
+margin_right = 100.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/Tesla" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 83 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/Tesla" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Tesla"
+
+[node name="Furnace" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 372.0
+margin_right = 204.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/Furnace" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 88 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/Furnace" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Furnace"
+
+[node name="GoblinHut" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_top = 496.0
+margin_right = 100.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/GoblinHut" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 87 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/GoblinHut" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Goblin
+Hut"
+
+[node name="AirDefence" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 496.0
+margin_right = 204.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/AirDefence" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 86 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/AirDefence" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Air
+Defence"
+
+[node name="GoldStorage" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/GoldStorage" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 80 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/GoldStorage" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Gold
+Storage"
+
+[node name="Wall" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 620.0
+margin_right = 204.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/Wall" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 90 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/Wall" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Wall"
+
+[node name="DuneDragon" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_top = 744.0
+margin_right = 100.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/DuneDragon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 109 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/DuneDragon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Dune
+Dragon"
+
+[node name="Skeleton" parent="SelectionTab/Buildings/7/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 744.0
+margin_right = 204.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/7/Buildings/Skeleton" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 112 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/7/Buildings/Skeleton" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Skeleton"
+
+[node name="8" type="ScrollContainer" parent="SelectionTab/Buildings"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 24.0
+
+[node name="Buildings" type="GridContainer" parent="SelectionTab/Buildings/8"]
+margin_left = 30.0
+margin_right = 234.0
+margin_bottom = 864.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+
+[node name="Cannon" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/Cannon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 116 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/Cannon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Cannon"
+
+[node name="WizardTower" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/WizardTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 117 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/WizardTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wizard
+Tower"
+
+[node name="ArcherTower" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_top = 124.0
+margin_right = 100.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/ArcherTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 118 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/ArcherTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Archer
+Tower"
+
+[node name="Mortar" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 124.0
+margin_right = 204.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/Mortar" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 119 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/Mortar" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Mortar"
+
+[node name="Xbow" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_top = 248.0
+margin_right = 100.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/Xbow" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 120 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/Xbow" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "X-Bow"
+
+[node name="InfernoTower" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 248.0
+margin_right = 204.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/InfernoTower" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 77 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/InfernoTower" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Inferno
+Tower"
+
+[node name="Tesla" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_top = 372.0
+margin_right = 100.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/Tesla" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 83 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/Tesla" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Tesla"
+
+[node name="Furnace" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 372.0
+margin_right = 204.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/Furnace" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 88 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/Furnace" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Furnace"
+
+[node name="GoblinHut" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_top = 496.0
+margin_right = 100.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/GoblinHut" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 87 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/GoblinHut" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Goblin
+Hut"
+
+[node name="AirDefence" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 496.0
+margin_right = 204.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/AirDefence" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 86 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/AirDefence" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Air
+Defence"
+
+[node name="GoldStorage" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/GoldStorage" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 121 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/GoldStorage" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Gold
+Storage"
+
+[node name="Wall" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_top = 620.0
+margin_right = 100.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 100, 120 )
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/Wall" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 90 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/Wall" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Wall"
+
+[node name="DuneDragon" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_top = 744.0
+margin_right = 100.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/DuneDragon" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 109 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/DuneDragon" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 120.0
+text = "Dune
+Dragon"
+
+[node name="Skeleton" parent="SelectionTab/Buildings/8/Buildings" instance=ExtResource( 19 )]
+margin_left = 104.0
+margin_top = 744.0
+margin_right = 204.0
+margin_bottom = 864.0
+
+[node name="Button" parent="SelectionTab/Buildings/8/Buildings/Skeleton" index="0"]
+margin_left = 0.0
+margin_right = 100.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 100, 79 )
+toggle_mode = true
+group = ExtResource( 45 )
+texture_normal = ExtResource( 112 )
+expand = true
+
+[node name="Name" parent="SelectionTab/Buildings/8/Buildings/Skeleton" index="1"]
+margin_top = 83.0
+margin_right = 100.0
+margin_bottom = 100.0
+text = "Skeleton"
+
+[node name="BuildingsContainer" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -118.0
+margin_top = -328.5
+margin_right = 218.0
+margin_bottom = 49.5
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 4
+script = ExtResource( 93 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuildingButton" type="TextureButton" parent="BuildingsContainer"]
+margin_right = 84.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton2" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 84.0
+margin_right = 168.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton3" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 168.0
+margin_right = 252.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton4" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 252.0
+margin_right = 336.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton5" type="TextureButton" parent="BuildingsContainer"]
+margin_top = 63.0
+margin_right = 84.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton6" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 84.0
+margin_top = 63.0
+margin_right = 168.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton7" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 168.0
+margin_top = 63.0
+margin_right = 252.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton8" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 252.0
+margin_top = 63.0
+margin_right = 336.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton9" type="TextureButton" parent="BuildingsContainer"]
+margin_top = 126.0
+margin_right = 84.0
+margin_bottom = 189.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton10" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 84.0
+margin_top = 126.0
+margin_right = 168.0
+margin_bottom = 189.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton11" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 168.0
+margin_top = 126.0
+margin_right = 252.0
+margin_bottom = 189.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton12" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 252.0
+margin_top = 126.0
+margin_right = 336.0
+margin_bottom = 189.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton13" type="TextureButton" parent="BuildingsContainer"]
+margin_top = 189.0
+margin_right = 84.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton14" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 84.0
+margin_top = 189.0
+margin_right = 168.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton15" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 168.0
+margin_top = 189.0
+margin_right = 252.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton16" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 252.0
+margin_top = 189.0
+margin_right = 336.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton17" type="TextureButton" parent="BuildingsContainer"]
+margin_top = 252.0
+margin_right = 84.0
+margin_bottom = 315.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton18" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 84.0
+margin_top = 252.0
+margin_right = 168.0
+margin_bottom = 315.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton19" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 168.0
+margin_top = 252.0
+margin_right = 252.0
+margin_bottom = 315.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton20" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 252.0
+margin_top = 252.0
+margin_right = 336.0
+margin_bottom = 315.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton21" type="TextureButton" parent="BuildingsContainer"]
+margin_top = 315.0
+margin_right = 84.0
+margin_bottom = 378.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton22" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 84.0
+margin_top = 315.0
+margin_right = 168.0
+margin_bottom = 378.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton23" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 168.0
+margin_top = 315.0
+margin_right = 252.0
+margin_bottom = 378.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="BuildingButton24" type="TextureButton" parent="BuildingsContainer"]
+margin_left = 252.0
+margin_top = 315.0
+margin_right = 336.0
+margin_bottom = 378.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 35 )
+
+[node name="MapContainer" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -118.0
+margin_top = 49.5
+margin_right = 218.0
+margin_bottom = 301.5
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 4
+script = ExtResource( 93 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TroopButton" type="TextureButton" parent="MapContainer"]
+margin_right = 84.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton2" type="TextureButton" parent="MapContainer"]
+margin_left = 84.0
+margin_right = 168.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton3" type="TextureButton" parent="MapContainer"]
+margin_left = 168.0
+margin_right = 252.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton4" type="TextureButton" parent="MapContainer"]
+margin_left = 252.0
+margin_right = 336.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton5" type="TextureButton" parent="MapContainer"]
+margin_top = 63.0
+margin_right = 84.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton6" type="TextureButton" parent="MapContainer"]
+margin_left = 84.0
+margin_top = 63.0
+margin_right = 168.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton7" type="TextureButton" parent="MapContainer"]
+margin_left = 168.0
+margin_top = 63.0
+margin_right = 252.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton8" type="TextureButton" parent="MapContainer"]
+margin_left = 252.0
+margin_top = 63.0
+margin_right = 336.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton9" type="TextureButton" parent="MapContainer"]
+margin_top = 126.0
+margin_right = 84.0
+margin_bottom = 189.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton10" type="TextureButton" parent="MapContainer"]
+margin_left = 84.0
+margin_top = 126.0
+margin_right = 168.0
+margin_bottom = 189.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton11" type="TextureButton" parent="MapContainer"]
+margin_left = 168.0
+margin_top = 126.0
+margin_right = 252.0
+margin_bottom = 189.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton12" type="TextureButton" parent="MapContainer"]
+margin_left = 252.0
+margin_top = 126.0
+margin_right = 336.0
+margin_bottom = 189.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton13" type="TextureButton" parent="MapContainer"]
+margin_top = 189.0
+margin_right = 84.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton14" type="TextureButton" parent="MapContainer"]
+margin_left = 84.0
+margin_top = 189.0
+margin_right = 168.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton15" type="TextureButton" parent="MapContainer"]
+margin_left = 168.0
+margin_top = 189.0
+margin_right = 252.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TroopButton16" type="TextureButton" parent="MapContainer"]
+margin_left = 252.0
+margin_top = 189.0
+margin_right = 336.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 84, 63 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="UtilityContainer" type="GridContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 49.0
+margin_top = -220.0
+margin_right = 401.0
+margin_bottom = -110.0
+custom_constants/vseparation = 10
+custom_constants/hseparation = 20
+columns = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fireball" parent="UtilityContainer" instance=ExtResource( 24 )]
+
+[node name="Image" parent="UtilityContainer/Fireball" index="0"]
+group = ExtResource( 33 )
+
+[node name="AnimationPlayer" parent="UtilityContainer/Fireball" index="1"]
+anims/book_pressed = SubResource( 2 )
+
+[node name="Rocket" parent="UtilityContainer" instance=ExtResource( 25 )]
+margin_left = 62.0
+margin_top = 0.0
+margin_right = 104.0
+margin_bottom = 50.0
+
+[node name="Image" parent="UtilityContainer/Rocket" index="0"]
+group = ExtResource( 33 )
+
+[node name="AnimationPlayer" parent="UtilityContainer/Rocket" index="1"]
+anims/book_pressed = SubResource( 2 )
+
+[node name="Zap" parent="UtilityContainer" instance=ExtResource( 23 )]
+margin_left = 124.0
+margin_top = 0.0
+margin_right = 166.0
+margin_bottom = 50.0
+
+[node name="Image" parent="UtilityContainer/Zap" index="0"]
+group = ExtResource( 33 )
+
+[node name="AnimationPlayer" parent="UtilityContainer/Zap" index="1"]
+anims/book_pressed = SubResource( 2 )
+
+[node name="Log" parent="UtilityContainer" instance=ExtResource( 22 )]
+margin_left = 186.0
+margin_top = 0.0
+margin_right = 228.0
+margin_bottom = 50.0
+
+[node name="Image" parent="UtilityContainer/Log" index="0"]
+group = ExtResource( 33 )
+
+[node name="AnimationPlayer" parent="UtilityContainer/Log" index="1"]
+anims/book_pressed = SubResource( 2 )
+
+[node name="Bless" parent="UtilityContainer" instance=ExtResource( 31 )]
+margin_left = 248.0
+margin_top = 0.0
+margin_right = 290.0
+margin_bottom = 50.0
+
+[node name="Image" parent="UtilityContainer/Bless" index="0"]
+group = ExtResource( 33 )
+
+[node name="AnimationPlayer" parent="UtilityContainer/Bless" index="1"]
+anims/book_pressed = SubResource( 2 )
+
+[node name="Earthquake" parent="UtilityContainer" instance=ExtResource( 107 )]
+margin_left = 310.0
+margin_top = 0.0
+margin_right = 352.0
+margin_bottom = 50.0
+
+[node name="Image" parent="UtilityContainer/Earthquake" index="0"]
+group = ExtResource( 33 )
+
+[node name="AnimationPlayer" parent="UtilityContainer/Earthquake" index="1"]
+anims/book_pressed = SubResource( 2 )
+
+[node name="Swap" parent="UtilityContainer" instance=ExtResource( 30 )]
+margin_top = 60.0
+margin_bottom = 110.0
+
+[node name="Image" parent="UtilityContainer/Swap" index="0"]
+group = ExtResource( 33 )
+
+[node name="Charge" parent="UtilityContainer" instance=ExtResource( 28 )]
+margin_left = 62.0
+margin_top = 60.0
+margin_right = 104.0
+margin_bottom = 110.0
+
+[node name="Image" parent="UtilityContainer/Charge" index="0"]
+group = ExtResource( 33 )
+
+[node name="Rush" parent="UtilityContainer" instance=ExtResource( 27 )]
+margin_left = 124.0
+margin_top = 60.0
+margin_right = 166.0
+margin_bottom = 110.0
+
+[node name="Image" parent="UtilityContainer/Rush" index="0"]
+group = ExtResource( 33 )
+
+[node name="Retreat" parent="UtilityContainer" instance=ExtResource( 26 )]
+margin_left = 186.0
+margin_top = 60.0
+margin_right = 228.0
+margin_bottom = 110.0
+
+[node name="Image" parent="UtilityContainer/Retreat" index="0"]
+group = ExtResource( 33 )
+
+[node name="Frontline" parent="UtilityContainer" instance=ExtResource( 29 )]
+margin_left = 248.0
+margin_top = 60.0
+margin_right = 290.0
+margin_bottom = 110.0
+
+[node name="Image" parent="UtilityContainer/Frontline" index="0"]
+group = ExtResource( 33 )
+
+[node name="Switch" parent="UtilityContainer" instance=ExtResource( 108 )]
+margin_left = 310.0
+margin_top = 60.0
+margin_right = 352.0
+margin_bottom = 110.0
+
+[node name="Image" parent="UtilityContainer/Switch" index="0"]
+group = ExtResource( 33 )
+
+[node name="InfoButton" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = -87.891
+margin_right = 180.0
+margin_bottom = -47.891
+rect_pivot_offset = Vector2( -208.685, -251.109 )
+custom_fonts/font = ExtResource( 94 )
+text = "Info"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsButton" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 205.0
+margin_top = -87.891
+margin_right = 370.0
+margin_bottom = -47.891
+custom_fonts/font = ExtResource( 94 )
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Redo" parent="." instance=ExtResource( 96 )]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 220.0
+margin_top = 308.0
+margin_right = 440.0
+margin_bottom = 438.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 100, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemActivationButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource( 98 )]
+margin_right = 100.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 0, 89 )
+toggle_mode = true
+texture_normal = ExtResource( 99 )
+expand = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 93.0
+margin_right = 100.0
+margin_bottom = 130.0
+custom_fonts/font = ExtResource( 100 )
+text = "Item activation"
+align = 1
+autowrap = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 100, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeleteTroopButton" parent="HBoxContainer/VBoxContainer2" instance=ExtResource( 98 )]
+margin_right = 100.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 0, 89 )
+toggle_mode = true
+texture_normal = ExtResource( 101 )
+expand = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 93.0
+margin_right = 100.0
+margin_bottom = 110.0
+custom_fonts/font = ExtResource( 100 )
+text = "Delete "
+align = 1
+autowrap = true
+
+[node name="PlaySingleTroops" type="VBoxContainer" parent="."]
+visible = false
+margin_left = 250.0
+margin_top = 38.0
+margin_right = 450.0
+margin_bottom = 123.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PlaySingleTroops"]
+margin_left = 18.0
+margin_right = 182.0
+margin_bottom = 48.0
+size_flags_horizontal = 6
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayBackButton" parent="PlaySingleTroops/HBoxContainer2" instance=ExtResource( 98 )]
+margin_right = 48.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+texture_normal = ExtResource( 103 )
+expand = true
+
+[node name="ChangeStateButton" type="TextureButton" parent="PlaySingleTroops/HBoxContainer2"]
+margin_left = 58.0
+margin_right = 106.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+toggle_mode = true
+texture_normal = ExtResource( 105 )
+texture_pressed = ExtResource( 106 )
+expand = true
+
+[node name="PlayNextButton" parent="PlaySingleTroops/HBoxContainer2" instance=ExtResource( 98 )]
+margin_left = 116.0
+margin_right = 164.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+texture_normal = ExtResource( 104 )
+expand = true
+
+[node name="HSlider" type="HSlider" parent="PlaySingleTroops"]
+margin_top = 52.0
+margin_right = 200.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 200, 0 )
+min_value = 100.0
+max_value = 1100.0
+step = 100.0
+value = 600.0
+
+[node name="Label" type="Label" parent="PlaySingleTroops"]
+margin_top = 72.0
+margin_right = 200.0
+margin_bottom = 85.0
+custom_fonts/font = ExtResource( 44 )
+text = "0.6s"
+align = 1
+
+[node name="SaveLoadContainer" type="VBoxContainer" parent="."]
+margin_left = 300.0
+margin_top = 20.0
+margin_right = 420.0
+margin_bottom = 120.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveMapButton" type="Button" parent="SaveLoadContainer"]
+margin_right = 120.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 120, 40 )
+size_flags_horizontal = 6
+custom_fonts/font = ExtResource( 94 )
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadMapButton" type="Button" parent="SaveLoadContainer"]
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 120, 40 )
+size_flags_horizontal = 6
+custom_fonts/font = ExtResource( 94 )
+text = "Load"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveContainer" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -40.0
+margin_right = 100.0
+margin_bottom = 66.0
+rect_min_size = Vector2( 220, 0 )
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapName" type="Label" parent="SaveContainer"]
+margin_right = 220.0
+margin_bottom = 17.0
+custom_fonts/font = ExtResource( 100 )
+text = "Map name:"
+
+[node name="LineEdit" type="LineEdit" parent="SaveContainer"]
+margin_top = 32.0
+margin_right = 220.0
+margin_bottom = 56.0
+max_length = 10
+
+[node name="MapButtons" type="HBoxContainer" parent="SaveContainer"]
+margin_top = 71.0
+margin_right = 220.0
+margin_bottom = 101.0
+
+[node name="SaveMapButton2" type="Button" parent="SaveContainer/MapButtons"]
+margin_right = 80.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 80, 0 )
+size_flags_horizontal = 2
+custom_fonts/font = ExtResource( 100 )
+text = "Save"
+
+[node name="CancelSaveMapButton" type="Button" parent="SaveContainer/MapButtons"]
+margin_left = 120.0
+margin_right = 220.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 8
+custom_fonts/font = ExtResource( 100 )
+text = "Cancel"
+
+[node name="LoadContainer" type="ScrollContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -250.0
+margin_right = 100.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 208, 500 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Files" type="VBoxContainer" parent="LoadContainer"]
+margin_left = 54.0
+margin_top = 235.0
+margin_right = 154.0
+margin_bottom = 265.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelLoadingFilessButton" type="Button" parent="LoadContainer/Files"]
+margin_right = 100.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 4
+custom_fonts/font = ExtResource( 100 )
+text = "cancel"
+
+[node name="RunesLog" type="ScrollContainer" parent="."]
+margin_left = 2.0
+margin_top = 120.0
+margin_right = 122.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 240, 60 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="RunesLog"]
+margin_bottom = 13.0
+custom_fonts/font = ExtResource( 44 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TroopsCount" parent="." instance=ExtResource( 115 )]
+margin_left = 16.0
+margin_top = 176.0
+margin_right = 456.0
+margin_bottom = 239.0
+
+[node name="GetImageOnAndroid" parent="." instance=ExtResource( 102 )]
+margin_top = 20.0
+margin_bottom = -69.0
+
+[node name="InfoMenu" parent="." instance=ExtResource( 95 )]
+
+[node name="StartingAnimation" parent="." instance=ExtResource( 97 )]
+
+[node name="FirstTimeUsingTheApp" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.643137 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FirstTimeUsingTheApp"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -54.0
+margin_right = 150.0
+margin_bottom = 54.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="FirstTimeUsingTheApp/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 57.0
+custom_fonts/font = ExtResource( 100 )
+text = "if this is the first time you are using this app, check the info tab from the bottom left"
+autowrap = true
+
+[node name="Button" type="Button" parent="FirstTimeUsingTheApp/VBoxContainer"]
+margin_left = 110.0
+margin_top = 77.0
+margin_right = 190.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 80, 31 )
+size_flags_horizontal = 4
+custom_fonts/font = ExtResource( 100 )
+text = "Got it"
+
+[node name="Stats" type="VBoxContainer" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Stats"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Stats"
+
+[node name="Wasted" type="HBoxContainer" parent="Stats"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="Stats/Wasted"]
+margin_right = 108.0
+margin_bottom = 14.0
+text = "Damage Wasted:"
+
+[node name="Damage" type="Label" parent="Stats/Wasted"]
+margin_left = 112.0
+margin_right = 120.0
+margin_bottom = 14.0
+text = "0"
+
+[node name="SettingsMenu" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="SettingsMenu"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -50.0
+margin_right = 58.0
+margin_bottom = -19.0
+custom_fonts/font = ExtResource( 94 )
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -307.0
+margin_top = -329.0
+margin_right = 307.0
+margin_bottom = 329.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SettingsMenu/VBoxContainer"]
+margin_right = 614.0
+margin_bottom = 33.0
+custom_fonts/font = ExtResource( 13 )
+text = "Settings"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="SettingsMenu/VBoxContainer"]
+margin_top = 37.0
+margin_right = 614.0
+margin_bottom = 97.0
+custom_constants/separation = 60
+
+[node name="SeeDeadBuildingsCheckButton" type="CheckButton" parent="SettingsMenu/VBoxContainer"]
+margin_top = 101.0
+margin_right = 614.0
+margin_bottom = 141.0
+custom_fonts/font = ExtResource( 94 )
+text = "See dead buildings"
+
+[node name="DeselectUtilityCheckButton" type="CheckButton" parent="SettingsMenu/VBoxContainer"]
+margin_top = 145.0
+margin_right = 614.0
+margin_bottom = 185.0
+custom_fonts/font = ExtResource( 94 )
+text = "Deselect book/spells manually "
+
+[node name="SeeTheTroopsAttackingCheckButton" type="CheckButton" parent="SettingsMenu/VBoxContainer"]
+margin_top = 189.0
+margin_right = 614.0
+margin_bottom = 229.0
+custom_fonts/font = ExtResource( 94 )
+text = "See the troops attacking"
+
+[node name="ShowHpOfTroopsAsNumbers" type="CheckButton" parent="SettingsMenu/VBoxContainer"]
+margin_top = 233.0
+margin_right = 614.0
+margin_bottom = 273.0
+custom_fonts/font = ExtResource( 94 )
+text = "Show hp of troops as numbers"
+
+[node name="Label2" type="Label" parent="SettingsMenu/VBoxContainer"]
+margin_top = 277.0
+margin_right = 614.0
+margin_bottom = 386.0
+custom_fonts/font = ExtResource( 94 )
+text = "
+
+Troops settings
+"
+align = 1
+
+[node name="UnitProprieties" parent="SettingsMenu/VBoxContainer" instance=ExtResource( 21 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 390.0
+margin_right = 614.0
+margin_bottom = 658.0
+
+[node name="OnTroopAttackTimer" type="Timer" parent="."]
+
+[connection signal="tree_exited" from="." to="." method="_on_MainMenu_tree_exited"]
+[connection signal="pressed" from="InfoButton" to="." method="_on_InfoButton_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/ItemActivationButton" to="." method="_on_ItemActivationButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/DeleteTroopButton" to="." method="_on_DeleteTroopButton_pressed"]
+[connection signal="pressed" from="PlaySingleTroops/HBoxContainer2/PlayBackButton" to="." method="_on_PlayBackButton_pressed"]
+[connection signal="toggled" from="PlaySingleTroops/HBoxContainer2/ChangeStateButton" to="." method="_on_ChangeStateButton_toggled"]
+[connection signal="pressed" from="PlaySingleTroops/HBoxContainer2/PlayNextButton" to="." method="_on_PlayNextButton_pressed"]
+[connection signal="value_changed" from="PlaySingleTroops/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="SaveLoadContainer/SaveMapButton" to="." method="_on_SaveMapButton_pressed"]
+[connection signal="pressed" from="SaveLoadContainer/LoadMapButton" to="." method="_on_LoadMapButton_pressed"]
+[connection signal="pressed" from="SaveContainer/MapButtons/SaveMapButton2" to="." method="_on_SaveMapButton2_pressed"]
+[connection signal="pressed" from="SaveContainer/MapButtons/CancelSaveMapButton" to="." method="_on_CancelSaveMapButton_pressed"]
+[connection signal="pressed" from="LoadContainer/Files/CancelLoadingFilessButton" to="." method="_on_CancelLoadingFilessButton_pressed"]
+[connection signal="tree_exited" from="StartingAnimation" to="." method="_on_StartingAnimation_tree_exited"]
+[connection signal="pressed" from="FirstTimeUsingTheApp/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="SettingsMenu/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="toggled" from="SettingsMenu/VBoxContainer/SeeDeadBuildingsCheckButton" to="." method="_on_SeeDeadBuildingsCheckButton_toggled"]
+[connection signal="toggled" from="SettingsMenu/VBoxContainer/DeselectUtilityCheckButton" to="." method="_on_DeselectUtilityCheckButton_toggled"]
+[connection signal="toggled" from="SettingsMenu/VBoxContainer/SeeTheTroopsAttackingCheckButton" to="." method="_on_SeeTheTroopsAttackingCheckButton_toggled"]
+[connection signal="toggled" from="SettingsMenu/VBoxContainer/ShowHpOfTroopsAsNumbers" to="." method="_on_ShowHpOfTroopsAsNumbers_toggled"]
+[connection signal="timeout" from="OnTroopAttackTimer" to="." method="_on_OnTroopAttackTimer_timeout"]
+
+[editable path="SelectionTab/Troops/Troops/Archer"]
+[editable path="SelectionTab/Troops/Troops/Barbarian"]
+[editable path="SelectionTab/Troops/Troops/Wizard"]
+[editable path="SelectionTab/Troops/Troops/Prince"]
+[editable path="SelectionTab/Troops/Troops/Giant"]
+[editable path="SelectionTab/Troops/Troops/Goblin"]
+[editable path="SelectionTab/Troops/Troops/Pekka"]
+[editable path="SelectionTab/Troops/Troops/Bomber"]
+[editable path="SelectionTab/Troops/Troops/BabyDragon"]
+[editable path="SelectionTab/Troops/Troops/Minion"]
+[editable path="SelectionTab/Troops/Troops/BombMIner"]
+[editable path="SelectionTab/Buildings/1/Buildings/Cannon"]
+[editable path="SelectionTab/Buildings/1/Buildings/WizardTower"]
+[editable path="SelectionTab/Buildings/1/Buildings/ArcherTower"]
+[editable path="SelectionTab/Buildings/1/Buildings/Mortar"]
+[editable path="SelectionTab/Buildings/1/Buildings/Xbow"]
+[editable path="SelectionTab/Buildings/1/Buildings/InfernoTower"]
+[editable path="SelectionTab/Buildings/1/Buildings/Tesla"]
+[editable path="SelectionTab/Buildings/1/Buildings/Furnace"]
+[editable path="SelectionTab/Buildings/1/Buildings/GoblinHut"]
+[editable path="SelectionTab/Buildings/1/Buildings/AirDefence"]
+[editable path="SelectionTab/Buildings/1/Buildings/GoldStorage"]
+[editable path="SelectionTab/Buildings/1/Buildings/Wall"]
+[editable path="SelectionTab/Buildings/1/Buildings/DuneDragon"]
+[editable path="SelectionTab/Buildings/1/Buildings/Skeleton"]
+[editable path="SelectionTab/Buildings/2/Buildings/Cannon"]
+[editable path="SelectionTab/Buildings/2/Buildings/WizardTower"]
+[editable path="SelectionTab/Buildings/2/Buildings/ArcherTower"]
+[editable path="SelectionTab/Buildings/2/Buildings/Mortar"]
+[editable path="SelectionTab/Buildings/2/Buildings/Xbow"]
+[editable path="SelectionTab/Buildings/2/Buildings/InfernoTower"]
+[editable path="SelectionTab/Buildings/2/Buildings/Tesla"]
+[editable path="SelectionTab/Buildings/2/Buildings/Furnace"]
+[editable path="SelectionTab/Buildings/2/Buildings/GoblinHut"]
+[editable path="SelectionTab/Buildings/2/Buildings/AirDefence"]
+[editable path="SelectionTab/Buildings/2/Buildings/GoldStorage"]
+[editable path="SelectionTab/Buildings/2/Buildings/Wall"]
+[editable path="SelectionTab/Buildings/2/Buildings/DuneDragon"]
+[editable path="SelectionTab/Buildings/2/Buildings/Skeleton"]
+[editable path="SelectionTab/Buildings/3/Buildings/Cannon"]
+[editable path="SelectionTab/Buildings/3/Buildings/WizardTower"]
+[editable path="SelectionTab/Buildings/3/Buildings/ArcherTower"]
+[editable path="SelectionTab/Buildings/3/Buildings/Mortar"]
+[editable path="SelectionTab/Buildings/3/Buildings/Xbow"]
+[editable path="SelectionTab/Buildings/3/Buildings/InfernoTower"]
+[editable path="SelectionTab/Buildings/3/Buildings/Tesla"]
+[editable path="SelectionTab/Buildings/3/Buildings/Furnace"]
+[editable path="SelectionTab/Buildings/3/Buildings/GoblinHut"]
+[editable path="SelectionTab/Buildings/3/Buildings/AirDefence"]
+[editable path="SelectionTab/Buildings/3/Buildings/GoldStorage"]
+[editable path="SelectionTab/Buildings/3/Buildings/Wall"]
+[editable path="SelectionTab/Buildings/3/Buildings/DuneDragon"]
+[editable path="SelectionTab/Buildings/3/Buildings/Skeleton"]
+[editable path="SelectionTab/Buildings/4/Buildings/Cannon"]
+[editable path="SelectionTab/Buildings/4/Buildings/WizardTower"]
+[editable path="SelectionTab/Buildings/4/Buildings/ArcherTower"]
+[editable path="SelectionTab/Buildings/4/Buildings/Mortar"]
+[editable path="SelectionTab/Buildings/4/Buildings/Xbow"]
+[editable path="SelectionTab/Buildings/4/Buildings/InfernoTower"]
+[editable path="SelectionTab/Buildings/4/Buildings/Tesla"]
+[editable path="SelectionTab/Buildings/4/Buildings/Furnace"]
+[editable path="SelectionTab/Buildings/4/Buildings/GoblinHut"]
+[editable path="SelectionTab/Buildings/4/Buildings/AirDefence"]
+[editable path="SelectionTab/Buildings/4/Buildings/GoldStorage"]
+[editable path="SelectionTab/Buildings/4/Buildings/Wall"]
+[editable path="SelectionTab/Buildings/4/Buildings/DuneDragon"]
+[editable path="SelectionTab/Buildings/4/Buildings/Skeleton"]
+[editable path="SelectionTab/Buildings/5/Buildings/Cannon"]
+[editable path="SelectionTab/Buildings/5/Buildings/WizardTower"]
+[editable path="SelectionTab/Buildings/5/Buildings/ArcherTower"]
+[editable path="SelectionTab/Buildings/5/Buildings/Mortar"]
+[editable path="SelectionTab/Buildings/5/Buildings/Xbow"]
+[editable path="SelectionTab/Buildings/5/Buildings/InfernoTower"]
+[editable path="SelectionTab/Buildings/5/Buildings/Tesla"]
+[editable path="SelectionTab/Buildings/5/Buildings/Furnace"]
+[editable path="SelectionTab/Buildings/5/Buildings/GoblinHut"]
+[editable path="SelectionTab/Buildings/5/Buildings/AirDefence"]
+[editable path="SelectionTab/Buildings/5/Buildings/GoldStorage"]
+[editable path="SelectionTab/Buildings/5/Buildings/Wall"]
+[editable path="SelectionTab/Buildings/5/Buildings/DuneDragon"]
+[editable path="SelectionTab/Buildings/5/Buildings/Skeleton"]
+[editable path="SelectionTab/Buildings/6/Buildings/Cannon"]
+[editable path="SelectionTab/Buildings/6/Buildings/WizardTower"]
+[editable path="SelectionTab/Buildings/6/Buildings/ArcherTower"]
+[editable path="SelectionTab/Buildings/6/Buildings/Mortar"]
+[editable path="SelectionTab/Buildings/6/Buildings/Xbow"]
+[editable path="SelectionTab/Buildings/6/Buildings/InfernoTower"]
+[editable path="SelectionTab/Buildings/6/Buildings/Tesla"]
+[editable path="SelectionTab/Buildings/6/Buildings/Furnace"]
+[editable path="SelectionTab/Buildings/6/Buildings/GoblinHut"]
+[editable path="SelectionTab/Buildings/6/Buildings/AirDefence"]
+[editable path="SelectionTab/Buildings/6/Buildings/GoldStorage"]
+[editable path="SelectionTab/Buildings/6/Buildings/Wall"]
+[editable path="SelectionTab/Buildings/6/Buildings/DuneDragon"]
+[editable path="SelectionTab/Buildings/6/Buildings/Skeleton"]
+[editable path="SelectionTab/Buildings/7/Buildings/Cannon"]
+[editable path="SelectionTab/Buildings/7/Buildings/WizardTower"]
+[editable path="SelectionTab/Buildings/7/Buildings/ArcherTower"]
+[editable path="SelectionTab/Buildings/7/Buildings/Mortar"]
+[editable path="SelectionTab/Buildings/7/Buildings/Xbow"]
+[editable path="SelectionTab/Buildings/7/Buildings/InfernoTower"]
+[editable path="SelectionTab/Buildings/7/Buildings/Tesla"]
+[editable path="SelectionTab/Buildings/7/Buildings/Furnace"]
+[editable path="SelectionTab/Buildings/7/Buildings/GoblinHut"]
+[editable path="SelectionTab/Buildings/7/Buildings/AirDefence"]
+[editable path="SelectionTab/Buildings/7/Buildings/GoldStorage"]
+[editable path="SelectionTab/Buildings/7/Buildings/Wall"]
+[editable path="SelectionTab/Buildings/7/Buildings/DuneDragon"]
+[editable path="SelectionTab/Buildings/7/Buildings/Skeleton"]
+[editable path="SelectionTab/Buildings/8/Buildings/Cannon"]
+[editable path="SelectionTab/Buildings/8/Buildings/WizardTower"]
+[editable path="SelectionTab/Buildings/8/Buildings/ArcherTower"]
+[editable path="SelectionTab/Buildings/8/Buildings/Mortar"]
+[editable path="SelectionTab/Buildings/8/Buildings/Xbow"]
+[editable path="SelectionTab/Buildings/8/Buildings/InfernoTower"]
+[editable path="SelectionTab/Buildings/8/Buildings/Tesla"]
+[editable path="SelectionTab/Buildings/8/Buildings/Furnace"]
+[editable path="SelectionTab/Buildings/8/Buildings/GoblinHut"]
+[editable path="SelectionTab/Buildings/8/Buildings/AirDefence"]
+[editable path="SelectionTab/Buildings/8/Buildings/GoldStorage"]
+[editable path="SelectionTab/Buildings/8/Buildings/Wall"]
+[editable path="SelectionTab/Buildings/8/Buildings/DuneDragon"]
+[editable path="SelectionTab/Buildings/8/Buildings/Skeleton"]
+[editable path="UtilityContainer/Fireball"]
+[editable path="UtilityContainer/Rocket"]
+[editable path="UtilityContainer/Zap"]
+[editable path="UtilityContainer/Log"]
+[editable path="UtilityContainer/Bless"]
+[editable path="UtilityContainer/Earthquake"]
+[editable path="UtilityContainer/Swap"]
+[editable path="UtilityContainer/Charge"]
+[editable path="UtilityContainer/Rush"]
+[editable path="UtilityContainer/Retreat"]
+[editable path="UtilityContainer/Frontline"]
+[editable path="UtilityContainer/Switch"]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/World/Drop.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/drops/more_bombs.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/drops/move_your_bombs.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/drops/invulnerable.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/drops/speed.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/drops/increase_explosion_icon.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/drops/more_health.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Drop" type="Node2D"]
+script = ExtResource( 1 )
+increase_explosion = ExtResource( 6 )
+invulnerable = ExtResource( 4 )
+more_bombs = ExtResource( 2 )
+move_your_bombs = ExtResource( 3 )
+speed = ExtResource( 5 )
+more_health = ExtResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -37.0
+margin_top = -47.0
+margin_right = 37.0
+margin_bottom = -12.0
+align = 1
+autowrap = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

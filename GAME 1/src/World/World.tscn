@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/images/Purple Nebula 8 - 1024x1024.png" type="Texture" id=1]
+[ext_resource path="res://src/Players/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/World/world.gd" type="Script" id=4]
+[ext_resource path="res://src/UI/MainUI.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Environment" id=1]
+background_mode = 4
+glow_enabled = true
+glow_levels/4 = true
+glow_intensity = 0.1
+glow_blend_mode = 0
+glow_hdr_luminance_cap = 2.0
+
+[node name="World" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512.788, 415.774 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="MainUI" parent="CanvasLayer2" instance=ExtResource( 5 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 0, 1024 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="BossComingTimer" type="Timer" parent="."]
+wait_time = 180.0
+one_shot = true
+autostart = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[connection signal="timeout" from="BossComingTimer" to="." method="_on_BossComingTimer_timeout"]

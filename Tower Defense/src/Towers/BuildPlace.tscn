@@ -1,0 +1,202 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/textures/build_place.png" type="Texture" id=1]
+[ext_resource path="res://src/Towers/build_place.gd" type="Script" id=2]
+[ext_resource path="res://assets/textures/build_towers_place.png" type="Texture" id=3]
+[ext_resource path="res://assets/textures/bomb.png.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/Arch.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/Sword.png" type="Texture" id=6]
+[ext_resource path="res://assets/textures/totem.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/house.png" type="Texture" id=8]
+[ext_resource path="res://assets/textures/check_mark.png" type="Texture" id=9]
+[ext_resource path="res://src/Towers/TowersTypeGroup.tres" type="ButtonGroup" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "build_towers_place_off"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("BuildTowersPlace:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BuildTowersPlace:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BuildTowersPlace:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("BuildTowersPlace:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BuildTowersPlace:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BuildTowersPlace:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="BuildPlace" type="Position2D"]
+position = Vector2( 479.311, 285.905 )
+script = ExtResource( 2 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = -31.9901
+margin_top = -76.8885
+margin_right = 32.0099
+margin_bottom = 23.1115
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuildTowersPlace" type="Sprite" parent="."]
+visible = false
+position = Vector2( 2.16461, -27.2039 )
+texture = ExtResource( 3 )
+
+[node name="BombTower" type="TextureButton" parent="BuildTowersPlace"]
+margin_left = -31.0
+margin_top = -134.0
+margin_right = 30.0
+margin_bottom = -74.0
+toggle_mode = true
+group = ExtResource( 10 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 9 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArchTower" type="TextureButton" parent="BuildTowersPlace"]
+margin_left = 37.8651
+margin_top = 72.5953
+margin_right = 98.8651
+margin_bottom = 132.595
+toggle_mode = true
+group = ExtResource( 10 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 9 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WizTower" type="TextureButton" parent="BuildTowersPlace"]
+margin_left = -98.9592
+margin_top = 71.7652
+margin_right = -37.9592
+margin_bottom = 131.765
+toggle_mode = true
+group = ExtResource( 10 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 9 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fortress" type="TextureButton" parent="BuildTowersPlace"]
+margin_left = 74.4166
+margin_top = -40.7673
+margin_right = 135.417
+margin_bottom = 19.2327
+toggle_mode = true
+group = ExtResource( 10 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 9 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="House" type="TextureButton" parent="BuildTowersPlace"]
+margin_left = -134.298
+margin_top = -40.2375
+margin_right = -73.2977
+margin_bottom = 19.7625
+toggle_mode = true
+group = ExtResource( 10 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/build_towers_place_off = SubResource( 1 )
+anims/build_towers_place_on = SubResource( 2 )
+
+[connection signal="button_down" from="TextureButton" to="." method="_on_button_down"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="button_down" from="BuildTowersPlace/BombTower" to="." method="_on_button_down"]
+[connection signal="pressed" from="BuildTowersPlace/BombTower" to="." method="on_type_of_tower_pressed" binds= [ 0 ]]
+[connection signal="button_down" from="BuildTowersPlace/ArchTower" to="." method="_on_button_down"]
+[connection signal="pressed" from="BuildTowersPlace/ArchTower" to="." method="on_type_of_tower_pressed" binds= [ 1 ]]
+[connection signal="button_down" from="BuildTowersPlace/WizTower" to="." method="_on_button_down"]
+[connection signal="pressed" from="BuildTowersPlace/WizTower" to="." method="on_type_of_tower_pressed" binds= [ 2 ]]
+[connection signal="button_down" from="BuildTowersPlace/Fortress" to="." method="_on_button_down"]
+[connection signal="pressed" from="BuildTowersPlace/Fortress" to="." method="on_type_of_tower_pressed" binds= [ 3 ]]
+[connection signal="button_down" from="BuildTowersPlace/House" to="." method="_on_button_down"]
+[connection signal="pressed" from="BuildTowersPlace/House" to="." method="on_type_of_tower_pressed" binds= [ 4 ]]

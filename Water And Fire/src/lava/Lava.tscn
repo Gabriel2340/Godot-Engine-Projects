@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/images/lava/blue.png" type="Texture" id=1]
+[ext_resource path="res://src/lava/Lava.gd" type="Script" id=2]
+
+[sub_resource type="Shader" id=4]
+code = "shader_type canvas_item;
+
+
+uniform float dif:hint_range(0.0, 1.0) = 0.5;
+
+vec2 keep_aspect(vec2 a) {
+	if (a.x > 1.0)
+		a.x -= 1.0;
+	if (a.y > 1.0)
+		a.y -= 1.0;
+	return a;
+}
+
+
+void fragment() {
+	vec2 uv = keep_aspect(UV + vec2(dif, 0.0));
+	vec4 color = texture(TEXTURE, uv);
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 4 )
+shader_param/dif = 0.0
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/dif")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "moving"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/dif")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 32, 13.5 )
+
+[node name="Lava" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 3 )
+position = Vector2( 0, 0.5 )
+scale = Vector2( 0.735632, 1.03333 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 64, 30 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "moving"
+playback_speed = 0.8
+anims/RESET = SubResource( 5 )
+anims/moving = SubResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 2 )
+shape = SubResource( 7 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

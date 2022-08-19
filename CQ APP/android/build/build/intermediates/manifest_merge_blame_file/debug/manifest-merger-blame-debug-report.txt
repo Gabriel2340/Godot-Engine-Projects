@@ -1,0 +1,139 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.godotengine.cqapp"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="1.0" > <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
+7    <uses-sdk
+8        android:minSdkVersion="18"
+9        android:targetSdkVersion="29" />
+10
+11    <supports-screens
+11-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:12:5-16:40
+12        android:largeScreens="true"
+12-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:15:9-36
+13        android:normalScreens="true"
+13-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:14:9-37
+14        android:smallScreens="true"
+14-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:13:9-36
+15        android:xlargeScreens="true" />
+15-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:16:9-37
+16
+17    <uses-feature
+17-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:10:5-78
+18        android:glEsVersion="0x00030000"
+18-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:10:19-51
+19        android:required="true" />
+19-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:10:52-75
+20
+21    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+21-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:11:5-80
+21-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:11:22-77
+22
+23    <instrumentation
+23-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:12:5-17:60
+24        android:name=".GodotInstrumentation"
+24-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:14:9-45
+25        android:icon="@mipmap/icon"
+25-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:15:9-36
+26        android:label="@string/godot_project_name_string"
+26-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:16:9-58
+27        android:targetPackage="org.godotengine.$genname" />
+27-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\src\debug\AndroidManifest.xml:17:9-57
+28
+29    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+29-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:13:5-81
+29-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:13:22-78
+30    <uses-permission android:name="android.permission.CAMERA" />
+30-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:14:5-65
+30-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:14:22-62
+31
+32    <uses-feature
+32-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:16:5-18:35
+33        android:name="android.hardware.camera"
+33-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:17:9-47
+34        android:required="true" />
+34-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:18:9-32
+35
+36    <application
+36-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:31:5-69:19
+37        android:allowBackup="false"
+37-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:31:68-95
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.0.0] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\61f903db516e52d8783db3337e87ee1a\core-1.0.0\AndroidManifest.xml:22:18-86
+39        android:debuggable="true"
+40        android:icon="@mipmap/icon"
+40-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:31:181-208
+41        android:label="@string/godot_project_name_string"
+41-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:31:18-67
+42        android:requestLegacyExternalStorage="true" >
+42-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:31:136-180
+43        <activity
+43-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:46:9-63:20
+44            android:name="com.godot.game.GodotApp"
+44-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:47:13-37
+45            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+45-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:52:13-141
+46            android:label="@string/godot_project_name_string"
+46-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:48:13-62
+47            android:launchMode="singleTask"
+47-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:50:13-44
+48            android:resizeableActivity="false"
+48-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:53:13-47
+49            android:screenOrientation="landscape"
+49-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:51:13-50
+50            android:theme="@style/GodotAppSplashTheme" >
+50-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:49:13-55
+51            <intent-filter>
+51-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:59:13-62:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:60:17-69
+52-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:60:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:61:17-77
+54-->C:\Users\Gabri\Desktop\Gabi last files\Godot\godot-projects\godot-projects\CQ APP\android\build\AndroidManifest.xml:61:27-74
+55            </intent-filter>
+56        </activity>
+57        <!-- Records the version of the Godot editor used for building -->
+58        <meta-data
+59            android:name="org.godotengine.editor.version"
+60            android:value="3.3.2.stable" /> <!-- Records the version of the Godot library -->
+61        <meta-data
+61-->[godot-lib.debug.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\bc1e848ec22747470543ab6597f4376b\jetified-godot-lib.debug\AndroidManifest.xml:20:9-22:44
+62            android:name="org.godotengine.library.version"
+62-->[godot-lib.debug.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\bc1e848ec22747470543ab6597f4376b\jetified-godot-lib.debug\AndroidManifest.xml:21:13-59
+63            android:value="3.3.2.stable" />
+63-->[godot-lib.debug.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\bc1e848ec22747470543ab6597f4376b\jetified-godot-lib.debug\AndroidManifest.xml:22:13-41
+64
+65        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+65-->[godot-lib.debug.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\bc1e848ec22747470543ab6597f4376b\jetified-godot-lib.debug\AndroidManifest.xml:24:9-80
+65-->[godot-lib.debug.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\bc1e848ec22747470543ab6597f4376b\jetified-godot-lib.debug\AndroidManifest.xml:24:18-77
+66
+67        <meta-data
+67-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:21:9-23:78
+68            android:name="org.godotengine.plugin.v1.GodotGetImage"
+68-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:22:13-67
+69            android:value="com.gmail.lamelynx.godotgetimage.GodotGetImage" />
+69-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:23:13-75
+70
+71        <provider
+71-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:25:9-33:20
+72            android:name="com.gmail.lamelynx.godotgetimage.GGIFileProvider"
+72-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:26:13-76
+73            android:authorities="org.godotengine.cqapp.ggi_FileProvider"
+73-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:27:13-68
+74            android:exported="false"
+74-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:28:13-37
+75            android:grantUriPermissions="true" >
+75-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:29:13-47
+76            <meta-data
+76-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:30:13-32:67
+77                android:name="android.support.FILE_PROVIDER_PATHS"
+77-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:31:17-67
+78                android:resource="@xml/ggi_file_provider_paths" />
+78-->[GodotGetImage.release.aar] C:\Users\Gabri\.gradle\caches\transforms-2\files-2.1\b340045a6891ad06a1a374d331949aa3\jetified-GodotGetImage.release\AndroidManifest.xml:32:17-64
+79        </provider>
+80    </application>
+81
+82</manifest>

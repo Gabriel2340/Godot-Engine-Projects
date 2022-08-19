@@ -1,0 +1,10 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=2]
+
+[sub_resource type="StreamTexture" id=8]
+flags = 4
+load_path = "res://.import/bomb_party_v4.png-12748bb7d88f83cf972f8837baf8b938.stex"
+
+[resource]
+flags = 4
+atlas = SubResource( 8 )
+region = Rect2( 224, 208, 16, 48 )

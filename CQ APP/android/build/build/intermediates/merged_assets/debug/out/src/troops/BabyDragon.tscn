@@ -1,0 +1,41 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://src/troops/Troop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/items/archer_0_3.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/items/archer_0_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/items/archer_0_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/items/archer_0_4.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/items/95_0.png" type="Texture" id=6]
+[ext_resource path="res://src/troops/baby_dragon.gd" type="Script" id=7]
+[ext_resource path="res://assets/images/items/giant_1_2.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/items/giant_1_1.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/items/155_0.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/items/giant_1_3.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/items/giant_1_4.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/troops/troop_baby_dragon.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/items/baby_dragon_2_2.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/items/baby_dragon_2_3.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/items/baby_dragon_2_1.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/items/baby_dragon_2_4.png" type="Texture" id=17]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+
+[node name="BabyDragon" instance=ExtResource( 1 )]
+texture_normal = ExtResource( 13 )
+script = ExtResource( 7 )
+first_item_icon_lvl_1 = ExtResource( 9 )
+first_item_icon_lvl_2 = ExtResource( 8 )
+first_item_icon_lvl_3 = ExtResource( 11 )
+first_item_icon_lvl_4 = ExtResource( 12 )
+second_item_icon_lvl_1 = ExtResource( 4 )
+second_item_icon_lvl_2 = ExtResource( 3 )
+second_item_icon_lvl_3 = ExtResource( 2 )
+second_item_icon_lvl_4 = ExtResource( 5 )
+third_item_icon_lvl_1 = ExtResource( 16 )
+third_item_icon_lvl_2 = ExtResource( 14 )
+third_item_icon_lvl_3 = ExtResource( 15 )
+third_item_icon_lvl_4 = ExtResource( 17 )
+first_optional_item = ExtResource( 10 )
+second_optional_item = ExtResource( 6 )
+third_optional_item = SubResource( 1 )

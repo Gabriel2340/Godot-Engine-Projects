@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/fonts/Space Font-40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/Main Menu/main menu.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/Purple Nebula 8 - 1024x1024.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/Space Font-24.tres" type="DynamicFont" id=4]
+
+[node name="Main Menu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -154.0
+margin_right = 50.0
+margin_bottom = -50.0
+custom_constants/separation = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+margin_right = 150.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/font = ExtResource( 4 )
+text = "Start"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+margin_top = 75.0
+margin_right = 150.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/font = ExtResource( 4 )
+text = "Settings"
+
+[node name="Settings" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -163.0
+margin_top = -31.0
+margin_right = 163.0
+margin_bottom = 31.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="HBoxContainer" parent="Settings/VBoxContainer"]
+margin_right = 326.0
+margin_bottom = 29.0
+custom_constants/separation = 30
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer/Music"]
+margin_right = 90.0
+margin_bottom = 29.0
+custom_fonts/font = ExtResource( 4 )
+text = "Music:"
+
+[node name="HSlider" type="HSlider" parent="Settings/VBoxContainer/Music"]
+margin_left = 226.0
+margin_right = 326.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+value = 70.0
+
+[node name="SoundEffects" type="HBoxContainer" parent="Settings/VBoxContainer"]
+margin_top = 33.0
+margin_right = 326.0
+margin_bottom = 62.0
+custom_constants/separation = 30
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer/SoundEffects"]
+margin_right = 196.0
+margin_bottom = 29.0
+custom_fonts/font = ExtResource( 4 )
+text = "Sound Effects:"
+
+[node name="HSlider" type="HSlider" parent="Settings/VBoxContainer/SoundEffects"]
+margin_left = 226.0
+margin_right = 326.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+value = 70.0
+
+[node name="GoBackButton2" type="Button" parent="Settings"]
+margin_left = 54.0
+margin_top = 514.0
+margin_right = 119.0
+margin_bottom = 569.0
+custom_fonts/font = ExtResource( 1 )
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="Settings/GoBackButton2" to="." method="_on_GoBackButton2_pressed"]

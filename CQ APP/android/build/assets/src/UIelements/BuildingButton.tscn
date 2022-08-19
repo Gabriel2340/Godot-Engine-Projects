@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/Clash-Regular-16.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/UIelements/SmartPhoneButton.tscn" type="PackedScene" id=2]
+
+[node name="BuildingButton" type="VBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -510.401, -42.2739 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" parent="." instance=ExtResource( 2 )]
+margin_left = 63.0
+margin_right = 63.0
+margin_bottom = 0.0
+size_flags_horizontal = 4
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="."]
+margin_top = 4.0
+margin_right = 126.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "building name"
+align = 1

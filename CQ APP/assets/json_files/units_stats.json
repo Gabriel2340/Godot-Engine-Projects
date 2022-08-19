@@ -1,0 +1,12 @@
+var troops: Dictionary = {"Archer" : {"items" : ["Fire Bow", "Quick Bow", "Strong Bow"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"Barbarian" : {"items" : ["Heavy Sword", "Guarding Sword", "Rage Sword"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"Wizard" : {"items" : ["Fire Robe", "Explosive Robe", "Armor Robe"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"Prince" : {"items" : ["Twofold Lance", "Power Lance", "Shield Lance"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"Giant" : {"items" : ["Rage Gauntlet", "Power Gauntlet", "Healing Gauntlet"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"Goblin" : {"items" : ["Triple Dagger", "Fury Dagger", "Dodgy Dagger"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"P.E.K.K.A" : {"items" : ["Lightning Blade", "Defensive Blade", "Dual Blade"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"Bomber" : {"items" : ["Ice Bomb", "Heavy Bomb", "Rage Bomb"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"Baby Dragon" : {"items" : ["Scattering Collar", "Fire Collar", "Force Collar"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"Minion" : {"items" : ["Explosive Gloves", "Revenge Gloves", "Double Gloves"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4},
+		"Bomb Miner" : {"items" : ["Fire Bomb", "Charging Bomb", "Zap Bomb"], "lvl" : 10, "items_lvl" : [4, 4, 4], "item" : 0, "rune_lvl" : 4}
+		}

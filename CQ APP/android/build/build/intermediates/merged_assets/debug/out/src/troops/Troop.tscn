@@ -1,0 +1,115 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/troops/troop.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Clash-Regular-24.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/images/other/fog2.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/other/lifebar/over.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/other/lifebar/health.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/Clash-Regular-16.tres" type="DynamicFont" id=6]
+
+[node name="Troop" type="TextureButton"]
+margin_right = 84.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+rect_pivot_offset = Vector2( -508, -357 )
+mouse_filter = 1
+expand = true
+stretch_mode = 5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemTexture" type="TextureRect" parent="."]
+margin_top = 40.0
+margin_right = 23.0
+margin_bottom = 63.0
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hover" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 30.4866
+margin_top = 16.5081
+margin_right = 60.4866
+margin_bottom = 53.5081
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+show_behind_parent = true
+margin_right = 84.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DebugRage" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 0, 0, 1, 1 )
+show_behind_parent = true
+margin_right = 84.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LifeBar" type="TextureProgress" parent="."]
+margin_left = 9.0
+margin_top = 48.0
+margin_right = 57.0
+margin_bottom = 56.0
+rect_rotation = -90.0
+rect_scale = Vector2( 0.8, 1 )
+mouse_filter = 2
+size_flags_vertical = 10
+value = 100.0
+texture_under = ExtResource( 5 )
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+tint_under = Color( 0.196078, 0.109804, 0.109804, 1 )
+tint_progress = Color( 0, 1, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hp" type="Label" parent="."]
+margin_left = 11.5
+margin_top = -5.0
+margin_right = 72.5
+margin_bottom = 8.0
+mouse_filter = 0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="." to="." method="_on_Troop_button_down"]
+[connection signal="button_up" from="." to="." method="_on_Troop_button_up"]
+[connection signal="pressed" from="." to="." method="_on_Troop_pressed"]
+[connection signal="timeout" from="Hover" to="." method="_on_hover_timeout"]

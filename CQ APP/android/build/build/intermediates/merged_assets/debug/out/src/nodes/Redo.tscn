@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/nodes/redo.gd" type="Script" id=1]
+[ext_resource path="res://src/UIelements/SmartPhoneButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/fonts/Clash-Regular-16.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/images/cq/undo.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/cq/redo.png" type="Texture" id=5]
+
+[node name="Redo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 10.0
+margin_top = 301.0
+margin_right = 214.0
+margin_bottom = 417.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 116.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SmartPhoneButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
+margin_right = 100.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 100, 89 )
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 99.0
+margin_right = 100.0
+margin_bottom = 116.0
+custom_fonts/font = ExtResource( 3 )
+text = "Undo"
+align = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 100.0
+margin_right = 200.0
+margin_bottom = 116.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RedoButton" parent="HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
+margin_right = 100.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 100, 89 )
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 99.0
+margin_right = 100.0
+margin_bottom = 116.0
+custom_fonts/font = ExtResource( 3 )
+text = "Redo"
+align = 1
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/SmartPhoneButton" to="." method="_on_SmartPhoneButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/RedoButton" to="." method="_on_RedoButton_pressed"]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/Clash-Regular-24.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/UIelements/get_image_on_android.gd" type="Script" id=2]
+
+[node name="GetImageOnAndroid" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 30.0
+margin_right = -770.0
+margin_bottom = -43.0
+mouse_filter = 2
+custom_constants/separation = 30
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 207.0
+margin_bottom = 100.0
+size_flags_horizontal = 0
+custom_constants/separation = 20
+
+[node name="Clear" type="Button" parent="VBoxContainer"]
+margin_left = 43.0
+margin_right = 163.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 120, 40 )
+size_flags_horizontal = 6
+custom_fonts/font = ExtResource( 1 )
+text = "Clear"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Load" type="Button" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 207.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 207, 40 )
+size_flags_horizontal = 6
+custom_fonts/font = ExtResource( 1 )
+text = "Load image"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+margin_top = 130.0
+margin_right = 400.0
+margin_bottom = 630.0
+rect_min_size = Vector2( 400, 500 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_top = 660.0
+margin_right = 400.0
+margin_bottom = 674.0
+
+[connection signal="pressed" from="VBoxContainer/Clear" to="." method="_on_Clear_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_Load_pressed"]

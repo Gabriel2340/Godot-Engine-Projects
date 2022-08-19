@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/images/books/tactic_rush.png" type="Texture" id=1]
+[ext_resource path="res://src/books/Book.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/books/rush.gd" type="Script" id=3]
+
+[node name="Rush" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Image" parent="." index="0"]
+texture_normal = ExtResource( 1 )

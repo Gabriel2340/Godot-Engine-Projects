@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/enemy1.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.3435, 8.36493 )
+
+[node name="Enemy1" instance=ExtResource( 1 )]
+position = Vector2( 0.157486, 0 )
+collision_layer = 2
+collision_mask = 6
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 0.819296, 0.822439, 0.82401, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0, 6 )
+
+[node name="PlayerDetector" type="Area2D" parent="." index="2"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" index="0"]
+position = Vector2( 0, -8.43916 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_PlayerDetector_body_entered"]

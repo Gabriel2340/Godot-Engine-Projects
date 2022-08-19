@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/fonts/Clash-Regular-16.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/buildings/building.gd" type="Script" id=2]
+[ext_resource path="res://src/UIelements/NumberEdit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/images/other/lifebar/health.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/other/lifebar/over.png" type="Texture" id=5]
+
+[node name="Building" type="TextureButton"]
+margin_left = 0.264862
+margin_right = 84.2649
+margin_bottom = 63.0
+rect_min_size = Vector2( 84, 63 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 63.1177, 0.0, -99.0 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 84.25, 0.264862 ]
+}
+
+[node name="Hp" type="Label" parent="."]
+margin_left = 11.5
+margin_top = -5.0
+margin_right = 72.5
+margin_bottom = 8.0
+mouse_filter = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "2800"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TurnsBeforeAttack" type="Label" parent="."]
+margin_left = 0.872627
+margin_top = 46.7348
+margin_right = 16.8726
+margin_bottom = 63.7348
+mouse_filter = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LifeBar" type="TextureProgress" parent="."]
+margin_left = 5.0
+margin_top = 46.0
+margin_right = 53.0
+margin_bottom = 54.0
+rect_rotation = -90.0
+rect_scale = Vector2( 0.8, 1 )
+mouse_filter = 2
+size_flags_vertical = 10
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_over = ExtResource( 5 )
+texture_progress = ExtResource( 4 )
+tint_under = Color( 0.196078, 0.109804, 0.109804, 1 )
+tint_progress = Color( 0.96875, 0.0491943, 0.0491943, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HpEdit" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_left = -35.0
+margin_top = -41.5
+margin_right = 35.0
+margin_bottom = -14.5
+custom_fonts/font = ExtResource( 1 )
+text = "2800"
+align = 1
+
+[node name="TurnsBeforeAttackEdit" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_left = -43.5957
+margin_top = 10.8519
+margin_right = -23.5957
+margin_bottom = 37.8519
+custom_fonts/font = ExtResource( 1 )
+custom_constants/minimum_spaces = 2
+text = "2"
+align = 1
+min_range = 1
+max_range = 9
+
+[connection signal="button_down" from="." to="." method="_on_Building_button_down"]
+[connection signal="pressed" from="." to="." method="_on_Building_pressed"]
+[connection signal="gui_input" from="Hp" to="." method="_on_Hp_gui_input"]
+[connection signal="gui_input" from="TurnsBeforeAttack" to="." method="_on_TurnsBeforeAttack_gui_input"]
+[connection signal="enter_pressed" from="HpEdit" to="." method="_on_HpEdit_enter_pressed"]
+[connection signal="enter_pressed" from="TurnsBeforeAttackEdit" to="." method="_on_TurnsBeforeAttackEdit_enter_pressed"]

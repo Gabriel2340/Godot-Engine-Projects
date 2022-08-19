@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/UIelements/SmartPhoneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/fonts/Clash-Regular-16.tres" type="DynamicFont" id=2]
+
+
+[node name="Troop" type="VBoxContainer"]
+margin_right = 33.0
+margin_bottom = 21.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" parent="." instance=ExtResource( 1 )]
+margin_left = 53.0
+margin_right = 53.0
+margin_bottom = 0.0
+size_flags_horizontal = 4
+
+[node name="Name" type="Label" parent="."]
+margin_top = 4.0
+margin_right = 107.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "troop name"
+align = 1

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Bullet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/attack/01.png" type="Texture" id=2]
+[ext_resource path="res://src/bullets/BulletEnemy2.gd" type="Script" id=3]
+
+[node name="BulletEnemy2" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" parent="." index="1"]
+collision_layer = 8
+collision_mask = 1
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( -0.346479, 0.25 )

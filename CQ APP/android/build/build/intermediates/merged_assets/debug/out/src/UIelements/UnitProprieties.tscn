@@ -1,0 +1,190 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/fonts/Clash-Regular-24.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/fonts/Clash-Regular-16.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/UIelements/troop_proprieties.gd" type="Script" id=3]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 1 )
+OptionButton/fonts/option_button = ExtResource( 1 )
+
+[node name="UnitProprieties" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -700.0
+margin_bottom = -360.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChooseTroop" type="HBoxContainer" parent="."]
+margin_left = 88.0
+margin_right = 412.0
+margin_bottom = 34.0
+size_flags_horizontal = 6
+custom_constants/separation = 10
+
+[node name="Title" type="Label" parent="ChooseTroop"]
+margin_top = 8.0
+margin_right = 120.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 120, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 2
+text = "Troop: "
+valign = 1
+
+[node name="Troop" type="OptionButton" parent="ChooseTroop"]
+margin_left = 130.0
+margin_right = 324.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 194, 34 )
+size_flags_horizontal = 0
+theme = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "P.E.K.K.A"
+align = 1
+
+[node name="TroopLvl" type="HBoxContainer" parent="."]
+margin_left = 88.0
+margin_top = 38.0
+margin_right = 412.0
+margin_bottom = 72.0
+size_flags_horizontal = 6
+custom_constants/separation = 10
+
+[node name="Label" type="Label" parent="TroopLvl"]
+margin_top = 8.0
+margin_right = 120.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 120, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 2
+text = "Troop level:"
+valign = 1
+
+[node name="Lvl" type="OptionButton" parent="TroopLvl"]
+margin_left = 130.0
+margin_right = 324.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 194, 34 )
+size_flags_horizontal = 0
+theme = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "8"
+align = 1
+
+[node name="Item" type="HBoxContainer" parent="."]
+margin_left = 88.0
+margin_top = 76.0
+margin_right = 412.0
+margin_bottom = 110.0
+size_flags_horizontal = 6
+custom_constants/separation = 10
+
+[node name="Label" type="Label" parent="Item"]
+margin_top = 8.0
+margin_right = 120.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 120, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 2
+text = "Item:"
+valign = 1
+
+[node name="Item" type="OptionButton" parent="Item"]
+margin_left = 130.0
+margin_right = 324.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 194, 34 )
+size_flags_horizontal = 0
+theme = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Scattering Collar"
+align = 1
+
+[node name="ItemLvl" type="HBoxContainer" parent="."]
+margin_left = 88.0
+margin_top = 114.0
+margin_right = 412.0
+margin_bottom = 148.0
+size_flags_horizontal = 6
+custom_constants/separation = 10
+
+[node name="Label" type="Label" parent="ItemLvl"]
+margin_top = 8.0
+margin_right = 120.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 120, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 2
+text = "Item lvl:"
+valign = 1
+
+[node name="Lvl" type="OptionButton" parent="ItemLvl"]
+margin_left = 130.0
+margin_right = 324.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 194, 34 )
+size_flags_horizontal = 0
+theme = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "4"
+align = 1
+
+[node name="RuneLvl" type="HBoxContainer" parent="."]
+margin_left = 88.0
+margin_top = 152.0
+margin_right = 412.0
+margin_bottom = 186.0
+size_flags_horizontal = 6
+custom_constants/separation = 10
+
+[node name="Label" type="Label" parent="RuneLvl"]
+margin_top = 8.0
+margin_right = 120.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 120, 0 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 2
+text = "Rune lvl:"
+valign = 1
+
+[node name="Lvl" type="OptionButton" parent="RuneLvl"]
+margin_left = 130.0
+margin_right = 324.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 194, 34 )
+size_flags_horizontal = 0
+theme = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "5"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="."]
+margin_top = 190.0
+margin_right = 500.0
+margin_bottom = 220.0
+custom_constants/separation = 30
+
+[node name="SaveButton" type="Button" parent="."]
+margin_left = 193.0
+margin_top = 224.0
+margin_right = 306.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 113, 44 )
+size_flags_horizontal = 4
+custom_fonts/font = ExtResource( 1 )
+text = "Save"
+
+[connection signal="item_selected" from="ChooseTroop/Troop" to="." method="_on_Troop_item_selected"]
+[connection signal="item_selected" from="TroopLvl/Lvl" to="." method="_on_Lvl_item_selected"]
+[connection signal="item_selected" from="Item/Item" to="." method="_on_Item_item_selected"]
+[connection signal="item_selected" from="ItemLvl/Lvl" to="." method="_on_ItemLvl_item_selected"]
+[connection signal="item_selected" from="RuneLvl/Lvl" to="." method="_on_rune_lvl_selected"]

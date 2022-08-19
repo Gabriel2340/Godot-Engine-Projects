@@ -1,0 +1,4 @@
+#Mon May 23 22:13:58 EEST 2022
+base.0=C\:\\Users\\Gabri\\Desktop\\Gabi last files\\Godot\\godot-projects\\godot-projects\\CQ APP\\android\\build\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
