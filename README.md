@@ -9,3 +9,5 @@ Game 3 is a simple platformer
 Tower defense is just a prototype, didn't want to add levels
 
 Water and Fire are the first 3 levels remade from the original game
+
+Endless runner is a prototype
